@@ -26,6 +26,9 @@ Users should be able to register, log in, log out and update their profile.
 
 ### User Stories
 As a ___, I want to _, because ____.
+
+Users: resgistered user and Non registered user
+
 As a non-user, I want to register, because I want to create a profile and use the app.
 As a user, I want to log in, because I want to track my to do's.
 As a user, I want to log out, because I dont want others to see my tasks.
@@ -42,14 +45,17 @@ As a user, I want to delete to-do's, because I no longer need to do it.
 As a user, I want to see the count of tasks, because I like knowing how long it is.
 As a user, I want to see all of my tasks in one place, because I need to know what to do.
 
+
+
+## Paths
 IF NOT LOGGED IN - / app.get('/') - Render text to direct user to resiger/login
 LOGIN - app.get('/login:id') - redirect to '/tasks'
 
 B app.get('/tasks')
-R app.get('/tasks:id')
-E app.post('/tasks:id/edit')
-A app.post('/tasks:id')
-D app.post('/tasks:id/delete')
+R app.get('/tasks/:id')
+E app.post('/tasks/:id/edit')
+A app.post('/tasks/:id')
+D app.post('/tasks/:id/delete')
 
 ### Databases
 ## Tables:
@@ -62,9 +68,9 @@ User
 Tasks
 - id SERIAL PRIMARY KEY NOT NULL 
 - user_id INTERGER REFERENCES user(id)
-- Category_id INTERGER REFERENCES categories(id) 
+- Category_id INTERGER REFERENCES categories(id)
 - title VARCHAR(255)
-- details TEXT
+- detail TEXT
 - created_at TIMESTAMP
 - due_date DATE
 - completed_date TIMESTAMP
@@ -74,6 +80,26 @@ Categories
 - task_id INTERGER REFERENCES tasks(id)
 - type VARCHAR(255)
 
+## API's
+<!-- AMAZON - http://api-doc.axesso.de/#api-Amazon
+- products
+- movies
+- books
+
+BING - https://docs.microsoft.com/en-us/bing/search-apis/bing-web-search/search-responses#querycontext-answer
+- restaurants
+- general query and servey response  -->
+
+1. YELP - check for restaurants
+
+2. WOLFRAM ALPHA - https://products.wolframalpha.com/short-answers-api/explorer/
+- ask questions and get quick responses
+- check if query is a book or movies
+
+3. EBAY - https://developer.ebay.com/devzone/shopping/docs/CallRef/FindProducts.html#Samples
+- check for products
+
+4. If no response, have a defaiult handler that lets the user specify in event of no response.
 
 ## Tech Choices
 - scss
@@ -101,7 +127,10 @@ Tues - All the functional requirements met
 Wed - Making it look nice
 Thus - Finish addressing bugs and finalize / post
 
-
+## Stretch
+Load new tasks in real time
+Dynamic view for how many categories to view
+Complete button to show finished todos
 
 <!-- ## queries
 Set up queries in a file and routes in another. Create the function to run the query and return the promise (.then). In another file import those functions and create the routes that help the html use those queries (create the app.get('/'. (req, res) => {
