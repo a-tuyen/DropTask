@@ -79,6 +79,12 @@ Categories
 - id SERIAL PRIMARY KEY NOT NULL 
 - task_id INTERGER REFERENCES tasks(id)
 - type VARCHAR(255)
+## Categories 
+1. To eat
+2.TO watch
+3.TO read
+4.To buy
+
 
 ## API's
 <!-- AMAZON - http://api-doc.axesso.de/#api-Amazon

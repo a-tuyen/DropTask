@@ -1,4 +1,5 @@
 -- Drop and recreate Users table
+CREATE DATABASE to-do-list;
 
 DROP TABLE IF EXISTS users CASCADE;
 CREATE TABLE users (
