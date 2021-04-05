@@ -90,9 +90,9 @@ Categories
 
 ## Categories 
 1. To eat
-2.TO watch
-3.TO read
-4.To buy
+2. TO watch
+3. TO read
+4. To buy
 
 
 ## API's
@@ -127,6 +127,8 @@ Sun - start baseline
 Mon - Code
 - object to get inserted into database
 - get tasks from database displayed on /tasks page
+
+STRETCH
 - create route for single task page
 - create routes for edit / delete of tasks
 

@@ -35,7 +35,7 @@ app.use(express.static("public"));
 // Note: Feel free to replace the example routes below with your own
 const usersRoutes = require("./routes/users");
 const widgetsRoutes = require("./routes/widgets");
-const poolFactory = require('pg/lib/pool-factory');
+// const poolFactory = require('pg/lib/pool-factory');
 
 
 // to be moved out to router route
@@ -49,6 +49,7 @@ const request = require('request');
 app.use("/api/users", usersRoutes(db));
 app.use("/api/widgets", widgetsRoutes(db));
 // Note: mount other resources here, using the same pattern above
+
 app.post('/tasks', (req, res) => {
   console.log(req.body)
   console.log(req.body.text)
