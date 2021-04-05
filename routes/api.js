@@ -31,4 +31,8 @@ request(`https://www.googleapis.com/customsearch/v1?key=${key}&cx=${cx}&q=${quer
   console.log(data.items[1]);
   findCategory(data.items[1]);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> be741731d7053c071aba51e13435f1097317a456
 });
