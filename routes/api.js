@@ -20,7 +20,7 @@ dataobj["category_id "] = category;
 dataobj["title "] = query;
 dataobj["description"] = data.snippet;
 dataobj["created_at"] = Date.now();
-// dataobj["imageurl"] = data.pagemap.cse_thumbnail[0].src
+dataobj["imageurl"] = data.pagemap.cse_thumbnail[0].src
 dataobj["completed"] = 0;
 console.log(dataobj);
 return (dataobj);
