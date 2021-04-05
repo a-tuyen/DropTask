@@ -44,7 +44,15 @@ As a user, I want to delete to-do's, because I no longer need to do it.
 
 As a user, I want to see the count of tasks, because I like knowing how long it is.
 As a user, I want to see all of my tasks in one place, because I need to know what to do.
-
+## EJS template
+2 templates
+- home page
+  - four columns with each task
+  - form for entering new tasks
+- individual tasks
+ - edit 
+ -delete
+ -completed
 
 
 ## Paths
@@ -79,6 +87,12 @@ Categories
 - id SERIAL PRIMARY KEY NOT NULL 
 - task_id INTERGER REFERENCES tasks(id)
 - type VARCHAR(255)
+## Categories 
+1. To eat
+2.TO watch
+3.TO read
+4.To buy
+
 
 ## API's
 <!-- AMAZON - http://api-doc.axesso.de/#api-Amazon
