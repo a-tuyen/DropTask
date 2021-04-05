@@ -14,8 +14,7 @@ CREATE TABLE tasks (
   description VARCHAR (255),
   imageurl  VARCHAR(255)
   created_at DATE
-  due_date  DATE
-  completed_date DATE -- should be booleam
+  completed BOOLEAN NOT NULL,
   user_id  INTEGER REFERENCES users(id)
   category_id INTEGER REFERENCES categories(id)
 )

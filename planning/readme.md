@@ -44,7 +44,15 @@ As a user, I want to delete to-do's, because I no longer need to do it.
 
 As a user, I want to see the count of tasks, because I like knowing how long it is.
 As a user, I want to see all of my tasks in one place, because I need to know what to do.
-
+## EJS template
+2 templates
+- home page
+  - four columns with each task
+  - form for entering new tasks
+- individual tasks
+ - edit 
+ -delete
+ -completed
 
 
 ## Paths

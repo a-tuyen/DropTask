@@ -16,17 +16,20 @@ const  findCategory  = function(data){
     category = 4 //to read;
   }
 dataobj["category_id "] = category;
-dataobj["title "] =data .title;
+dataobj["title "] = query;
 dataobj["description"] = data.snippet;
 dataobj["created_at"] = Date.now();
 dataobj["imageurl"] = data.pagemap.cse_thumbnail[0].src
-
+dataobj["completed"] = 0;
+console.log(dataobj);
 return (dataobj);
+
 };
 
 request(`https://www.googleapis.com/customsearch/v1?key=${key}&cx=${cx}&q=${query}`, (error, response, body) => {
   let data =JSON.parse(body);
   console.log(data.items[1]);
   findCategory(data.items[1]);
+
 
 });
