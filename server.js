@@ -35,12 +35,44 @@ app.use(express.static("public"));
 // Note: Feel free to replace the example routes below with your own
 const usersRoutes = require("./routes/users");
 const widgetsRoutes = require("./routes/widgets");
+const poolFactory = require('pg/lib/pool-factory');
+
+
+// to be moved out to router route
+const findCategory = require('./routes/api');
+const key = process.env.DB_KEY;
+const cx = process.env.DB_CX
+const request = require('request');
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
 app.use("/api/users", usersRoutes(db));
 app.use("/api/widgets", widgetsRoutes(db));
 // Note: mount other resources here, using the same pattern above
+app.post('/tasks', (req, res) => {
+  console.log(req.body)
+  console.log(req.body.text)
+
+  // const data = JSON.parse(req.body)
+  // console.log('data', data)
+  // findCategory(req.body.text)
+  request(`https://www.googleapis.com/customsearch/v1?key=${key}&cx=${cx}&q=${req.body.text}`, (error, response, body) => {
+  let data =JSON.parse(body);
+  console.log(data.items[0].displayLink)
+  findCategory(data.items[1], req.body.text);
+});
+
+  // pool.query(INSERT INTO )
+  // const shortURL = generateRandomString();
+  // const longURL = 'http://' + req.body.longURL;
+  // const userID = req.session.userID;
+  // urlDatabase[shortURL] = {
+  //   longURL,
+  //   userID,
+  // };
+  // return res.redirect('/urls/' + shortURL);
+  console.log('it worked')
+});
 
 
 // Home page
