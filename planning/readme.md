@@ -87,6 +87,7 @@ Categories
 - id SERIAL PRIMARY KEY NOT NULL 
 - task_id INTERGER REFERENCES tasks(id)
 - type VARCHAR(255)
+
 ## Categories 
 1. To eat
 2.TO watch
@@ -95,25 +96,7 @@ Categories
 
 
 ## API's
-<!-- AMAZON - http://api-doc.axesso.de/#api-Amazon
-- products
-- movies
-- books
-
-BING - https://docs.microsoft.com/en-us/bing/search-apis/bing-web-search/search-responses#querycontext-answer
-- restaurants
-- general query and servey response  -->
-
-1. YELP - check for restaurants
-
-2. WOLFRAM ALPHA - https://products.wolframalpha.com/short-answers-api/explorer/
-- ask questions and get quick responses
-- check if query is a book or movies
-
-3. EBAY - https://developer.ebay.com/devzone/shopping/docs/CallRef/FindProducts.html#Samples
-- check for products
-
-4. If no response, have a defaiult handler that lets the user specify in event of no response.
+- Google custom searching, looking through Amazon, Yelp, Imdb, Goodreads.
 
 ## Tech Choices
 - scss
@@ -136,7 +119,17 @@ Front-end
 Sat - look into libraries / API - finish project scoping / outline
       / pseudo code
 Sun - start baseline
+- Get submit for live to run queries
+  (routes ready for submit page)
+- set up database / tables
+- have query return search results and filter into correct categories/table
+
 Mon - Code
+- object to get inserted into database
+- get tasks from database displayed on /tasks page
+- create route for single task page
+- create routes for edit / delete of tasks
+
 Tues - All the functional requirements met
 Wed - Making it look nice
 Thus - Finish addressing bugs and finalize / post
@@ -154,3 +147,4 @@ Set up queries in a file and routes in another. Create the function to run the q
     (res.JSON(thing))
   })
 })) -->
+
