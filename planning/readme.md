@@ -122,6 +122,10 @@ Front-end
 Sat - look into libraries / API - finish project scoping / outline
       / pseudo code
 Sun - start baseline
+- Get submit for live to run queries
+  (routes ready for submit page)
+- set up database / tables
+- have query return search results and filter into correct categories/table
 Mon - Code
 Tues - All the functional requirements met
 Wed - Making it look nice
@@ -140,3 +144,4 @@ Set up queries in a file and routes in another. Create the function to run the q
     (res.JSON(thing))
   })
 })) -->
+
