@@ -8,8 +8,8 @@ CREATE TABLE tasks (
   imageurl  VARCHAR(255),
   created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
   completed BOOLEAN NOT NULL,
-  user_id  INTEGER REFERENCES users(id),
-  category_id INTEGER REFERENCES categories(id)
+  user_id  INTEGER REFERENCES users(id) DELETE ON DELETE CASCADE,
+  category_id INTEGER REFERENCES categories(id) ON DELETE CASCADE
 );
 
 
