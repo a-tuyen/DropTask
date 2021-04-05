@@ -31,5 +31,4 @@ request(`https://www.googleapis.com/customsearch/v1?key=${key}&cx=${cx}&q=${quer
   console.log(data.items[1]);
   findCategory(data.items[1]);
 
-
 });
