@@ -10,9 +10,9 @@ const  findCategory  = function(data, query){
   if (data.displayLink === "www.imdb.com") {
     category = 1;//categories of movie
   } else if(data.displayLink === "www.amazon.ca") {
-    category =2;//products
+    category = 2;//products
   }else if(data.displayLink === "www.yelp.ca") {
-    category =3 ;//food
+    category = 3 ;//food
   } else {
     category = 4 //to read;
   }

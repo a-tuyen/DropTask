@@ -1,9 +1,3 @@
--- Drop and recreate Users table
-<<<<<<< HEAD
-=======
-CREATE DATABASE to-do-list;
-
->>>>>>> be741731d7053c071aba51e13435f1097317a456
 DROP TABLE IF EXISTS users CASCADE;
 
 CREATE TABLE users (
