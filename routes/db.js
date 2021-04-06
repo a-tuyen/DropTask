@@ -26,7 +26,7 @@ exports.insertNewTask = insertNewTask;
 
 // gettaskwith task_id
 const gettaskwithtaskId = function(taskid){
-  return db.query(`SELECT title, description, imageurl, type FROM tasks JOIN categories ON categories.id=category_id WHERE tasks.id =$1`,[taskid])
+  return db.query(`SELECT title, description, imageurl, type, tasks.id FROM tasks JOIN categories ON categories.id=category_id WHERE tasks.id =$1`,[taskid])
   .then(res => {
     if(res.rows[0]) {
     return (res.rows)
