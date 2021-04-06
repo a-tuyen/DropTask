@@ -16,7 +16,7 @@ VALUES ('Watch robo-cop', 'bizzare movie', 'https://upload.wikimedia.org/wikiped
 false, 1, 1);
 INSERT INTO tasks (title, description, imageurl, completed, user_id, category_id)
 VALUES ('Eat at la taqueria', 'my favorite tacos', 'https://media-cdn.tripadvisor.com/media/photo-s/17/60/51/2a/photo1jpg.jpg',
-false, 1, 3)
+false, 1, 3);
 
 
 -- categories

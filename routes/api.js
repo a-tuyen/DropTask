@@ -20,9 +20,10 @@ const  findCategory  = function(data){
   dataobj["category_id"] = category;
   dataobj["description"] = data.snippet;
   dataobj["created_at"] = Date.now();
-  dataobj["imageurl"] = data.pagemap.cse_thumbnail[0].src
+  // dataobj["imageurl"] = data.pagemap.cse_thumbnail[0].src
   dataobj["completed"] = false;
-  return (dataobj);
+  // console.log(dataobj);
+  return dataobj;
 };
 
 module.exports = findCategory;

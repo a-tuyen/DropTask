@@ -52,25 +52,25 @@ const findCategory = require('./routes/api');
 app.use("/api/users", usersRoutes(db));
 app.use("/api/widgets", widgetsRoutes(db));
 // Note: mount other resources here, using the same pattern above
+
+
 app.post('/new_tasks', (req, res) => {
   const title = req.body.text;
-
-  const userid =req.cookies.user_id
-  console.log(title,userid);
+  const userid = req.cookies.user_id
   const url = `https://www.googleapis.com/customsearch/v1?key=${key}&cx=${cx}&q=${req.body.text}`;
+
   axios.get(url)
   .then(result => {
-    // console.log(result.data.items[0])
-    return  findCategory(result.data.items[0]);
+    return findCategory(result.data.items[0]);
   })
-.then((dataobj) =>{
-console.log(dataobj);
-db.query(`INSERT INTO tasks (title, description, imageurl, completed, user_id, category_id)
-  VALUES ($1,$2,$3,$4,$5,$6,$7,$8)) RETURNING * ;`,[`${title}`,`${dataobj.description}`,`${dataobj.imageurl}`,`${dataobj.completed}`,`${userid}`,`${dataobj.category_id}`]
- )
+  .then((dataobj) =>{
+  console.log('dataobj:', dataobj);
+  return db.query(`INSERT INTO tasks (title, description, imageurl, completed, user_id, category_id)
+    VALUES ($1,$2,$3,$4,$5,$6) RETURNING * ;`,[`${title}`,`${dataobj.description}`,`${dataobj.imageurl}`,
+    `${dataobj.completed}`,userid ,`${dataobj.category_id}`]
+  )
  })
-//  .catch(err => console.log(err));
-
+ .catch(err => console.log(err));
 });
 
 app.get('/login/:userId', (req, res) => {
