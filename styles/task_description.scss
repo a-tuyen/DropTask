@@ -1,0 +1,38 @@
+
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.col1 {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 500px;
+  height: 400px;
+  margin: 40px;
+}
+
+
+.col2 {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 60%;
+  margin: 40px;
+}
+
+.task_info > p {
+  border: 1px solid black;
+  margin: 15px;
+  height: 50px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 15px;
+}
