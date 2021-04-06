@@ -5,7 +5,7 @@ db.connect();
 
 //function to get items with category
 const gettasksWithCategory = function(categoryid,userid) {
-  return  db.query(`SELECT title ,tasks.id FROM tasks JOIN users ON user_id = users.id WHERE user_id = $1 AND category_id = $2`,[userid,categoryid] )
+  return  db.query(`SELECT title ,tasks.id FROM tasks JOIN users ON user_id = users.id WHERE user_id = $1 AND category_id = $2 AND completed = false`,[userid,categoryid] )
   .then(res => {
     if(res.rows[0]) {
     return (res.rows)
@@ -26,7 +26,7 @@ exports.insertNewTask = insertNewTask;
 
 // gettaskwith task_id
 const gettaskwithtaskId = function(taskid){
-  return db.query(`SELECT title, description, imageurl, type FROM tasks JOIN categories ON categories.id=category_id WHERE tasks.id =$1`,[taskid])
+  return db.query(`SELECT title, description, imageurl, type,tasks.id FROM tasks JOIN categories ON categories.id=category_id WHERE tasks.id =$1`,[taskid])
   .then(res => {
     if(res.rows[0]) {
     return (res.rows)
@@ -34,3 +34,11 @@ const gettaskwithtaskId = function(taskid){
   });
 }
 exports.gettaskwithtaskId = gettaskwithtaskId;
+
+//update task as completed
+
+const updateTaskcompleted = function(taskid){
+  return db.query(`UPDATE  tasks SET completed = true WHERE tasks.id = $1 RETURNING * ;`,[taskid])
+  .then(res => res.rows);
+}
+exports.updateTaskcompleted = updateTaskcompleted;

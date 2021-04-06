@@ -47,7 +47,6 @@ module.exports = (db) => {
         return db.gettasksWithCategory(4, req.cookies.user_id);
       }). then (result =>{
         templatevar["Books"] = result;
-      }). then (()=>{
         res.render("index", templatevar);
       });
     });
@@ -62,6 +61,16 @@ module.exports = (db) => {
         res.render("task_description",templatevar);
        });
      });
+
+    //complete a particular page
+    router.post('/:taskId/complete',(req,res)=>{
+      db.updateTaskcompleted(req.params.taskId)
+      .then((results)=>{
+        console.log(results);
+        res.redirect("/user/tasks");
+      });
+    });
+
 
     return router;
   };

@@ -34,7 +34,9 @@
         </div>
         <div>
           <button type="button" class="btn btn-danger">Delete</button>
-          <button type="button" class="btn btn-success">Complete</button>
+          <form action="/user/<%= task[0].id%>/complete" method="POST">
+            <button type="submit" class="btn btn-success">Complete</button>
+          </form>
         </div>
       </div>
       </div>
