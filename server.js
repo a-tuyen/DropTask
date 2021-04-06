@@ -47,6 +47,7 @@ app.use("/api/widgets", widgetsRoutes(db));
 // Note: mount other resources here, using the same pattern above
 
 
+
 app.get('/login/:userId', (req, res) => {
   res.cookie('user_id', req.params.userId);
   // redirect the user somewhere
