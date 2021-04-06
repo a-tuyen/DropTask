@@ -8,18 +8,11 @@ const express    = require("express");
 const bodyParser = require("body-parser");
 const sass       = require("node-sass-middleware");
 const app        = express();
-const axios      = require("axios");
 const morgan     = require('morgan');
 var cookieParser = require('cookie-parser');
-app.use(cookieParser())
-const key = process.env.DB_KEY;
-const cx = process.env.DB_CX
+app.use(cookieParser());
 
-// PG database client/connection setup
-const { Pool } = require('pg');
-const dbParams = require('./lib/db.js');
-const db = new Pool(dbParams);
-db.connect();
+const db = require("./routes/db.js")
 
 // Load the logger first so all (static) HTTP requests are logged to STDOUT
 // 'dev' = Concise output colored by response status for development use.
@@ -53,44 +46,8 @@ app.use("/api/users", usersRoutes(db));
 app.use("/api/widgets", widgetsRoutes(db));
 // Note: mount other resources here, using the same pattern above
 
-<<<<<<< HEAD
-app.post('/tasks', (req, res) => {
-  console.log(req.body)
-  console.log(req.body.text)
-
-  // const data = JSON.parse(req.body)
-  // console.log('data', data)
-  // findCategory(req.body.text)
-  request(`https://www.googleapis.com/customsearch/v1?key=${key}&cx=${cx}&q=${req.body.text}`, (error, response, body) => {
-  let data =JSON.parse(body);
-  console.log(data.items[0].displayLink)
-  findCategory(data.items[1], req.body.text);
-=======
-
-app.post('/new_tasks', (req, res) => {
-  const title = req.body.text;
-  const userid = req.cookies.user_id
-  const url = `https://www.googleapis.com/customsearch/v1?key=${key}&cx=${cx}&q=${req.body.text}`;
-
-  axios.get(url)
-  .then(result => {
-    return findCategory(result.data.items[0]);
-  })
-  .then((dataobj) =>{
-  console.log('dataobj:', dataobj);
-  return db.query(`INSERT INTO tasks (title, description, imageurl, completed, user_id, category_id)
-    VALUES ($1,$2,$3,$4,$5,$6) RETURNING * ;`,[`${title}`,`${dataobj.description}`,`${dataobj.imageurl}`,
-    `${dataobj.completed}`,userid ,`${dataobj.category_id}`]
-  )
- })
- .catch(err => console.log(err));
->>>>>>> database_query_Divya
-});
 
 app.get('/login/:userId', (req, res) => {
-  // // if using cookie-session middleware
-  // req.session.user_id = req.params.userId;
-  // if using plaintext cookies
   res.cookie('user_id', req.params.userId);
   // redirect the user somewhere
   res.redirect('/');

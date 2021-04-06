@@ -1,5 +1,4 @@
 require('dotenv').config();
-const request = require('request');
 const axios = require('axios');
 const key = process.env.DB_KEY;
 const cx = process.env.DB_CX;
@@ -29,14 +28,3 @@ const  findCategory  = function(data){
 module.exports = findCategory;
 
 
-
-axios.post('/user', {
-  firstName: 'Fred',
-  lastName: 'Flintstone'
-})
-.then(function (response) {
-  console.log(response);
-})
-.catch(function (error) {
-  console.log(error);
-});

@@ -6,21 +6,46 @@
  */
 
 const express = require('express');
-const router  = express.Router();
+const axios = require('axios');
+const router = express.Router();
+const key = process.env.DB_KEY;
+const cx = process.env.DB_CX;
+const findCategory = require('./api');
+
 
 module.exports = (db) => {
-  router.get("/", (req, res) => {
-    db.query(`SELECT * FROM users;`)
-      .then(data => {
-        const users = data.rows;
-        res.json({ users });
+
+
+  router.post('/new_tasks', (req, res) => {
+    const title = req.body.text;
+    const userid = req.cookies.user_id
+    const url = `https://www.googleapis.com/customsearch/v1?key=${key}&cx=${cx}&q=${req.body.text}`;
+    axios.get(url)
+      .then(result => {
+        return findCategory(result.data.items[0]);
       })
-      .catch(err => {
-        res
-          .status(500)
-          .json({ error: err.message });
-      });
+      .then((dataobj) => {
+        db.insertNewTask(dataobj, title, userid);
+      })
+      .catch(err => console.log(err));
+    res.redirect("/")
   });
+
+  router.get('/:userid', (req, res) => {
+    let templatevarMovie = db.gettasksWithCategory(1, req.cookies.user_id);
+    let templatevarProduct = db.gettasksWithCategory(2,req.cookies.user_id);
+    let templatevarRestuarant = db.gettasksWithCategory(3,req.cookies.user_id);
+    let templatevarBooks= db.gettasksWithCategory(4,req.cookies.user_id);
+    console.log(templatevarMovie,templatevarBooks,templatevarProduct,templatevarRestuarant);
+
+    res.redirect("/");
+  });
+
+
+
+
+
+
   return router;
 };
 
