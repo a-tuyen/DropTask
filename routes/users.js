@@ -32,13 +32,20 @@ module.exports = (db) => {
   });
 
   router.get('/:userid', (req, res) => {
-    let templatevarMovie = db.gettasksWithCategory(1, req.cookies.user_id);
-    let templatevarProduct = db.gettasksWithCategory(2,req.cookies.user_id);
-    let templatevarRestuarant = db.gettasksWithCategory(3,req.cookies.user_id);
-    let templatevarBooks= db.gettasksWithCategory(4,req.cookies.user_id);
-    console.log(templatevarMovie,templatevarBooks,templatevarProduct,templatevarRestuarant);
 
-    res.redirect("/");
+    let templateVars = {
+      templatevarMovie: db.gettasksWithCategory(1, req.cookies.user_id),
+      templatevarProducts: db.gettasksWithCategory(2, req.cookies.user_id),
+      templatevarRestaurants: db.gettasksWithCategory(3, req.cookies.user_id),
+      templatevarBooks: db.gettasksWithCategory(4, req.cookies.user_id)
+      }
+    // let templatevarMovie = db.gettasksWithCategory(1, req.cookies.user_id);
+    // let templatevarProduct = db.gettasksWithCategory(2,req.cookies.user_id);
+    // let templatevarRestuarant = db.gettasksWithCategory(3,req.cookies.user_id);
+    // let templatevarBooks= db.gettasksWithCategory(4,req.cookies.user_id);
+    // console.log(templatevarMovie,templatevarBooks,templatevarProduct,templatevarRestuarant);
+
+    res.render("index", templateVars);
   });
 
 

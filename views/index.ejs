@@ -27,9 +27,9 @@
       <div class='categories'>
         <section>
         <h1>Movies</h1>
-        <p>watch harry potter</p>
-          <p>watch harry potter</p>
-          <p>watch harry potter</p>
+        <% for(let task in templatevarMovie) { %>
+          <td><%= task %></td>
+        <% } %>
       </section>
       <section>
         <h1>Books</h1>

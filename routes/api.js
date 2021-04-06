@@ -21,7 +21,6 @@ const  findCategory  = function(data){
   dataobj["created_at"] = Date.now();
   dataobj["imageurl"] = data.pagemap.cse_thumbnail[0].src
   dataobj["completed"] = false;
-  // console.log(dataobj);
   return dataobj;
 };
 
