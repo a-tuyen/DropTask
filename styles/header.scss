@@ -1,6 +1,26 @@
 nav {
-  border: solid 1px black;
+  width: 100%;
+
+  position: fixed;
+  top: 0;
+  padding: 1.5rem;
+  height: 120px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  opacity: 1;
 }
+
+// span .task {
+//   font-family: 'Zilla Slab Highlight', cursive;
+//   font-size: xx-large;
+// }
+
+nav > div > span.task {
+  font-family: 'Zilla Slab Highlight', cursive;
+  font-weight: 700;
+  font-size: xx-large;
+}
+
