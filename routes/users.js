@@ -49,10 +49,19 @@ module.exports = (db) => {
         templatevar["Books"] = result;
       }). then (()=>{
         res.render("index", templatevar);
-        console.log(templatevar);
-
       });
     });
+
+    //renders a page for specific task
+     router.get('/tasks/:taskId',(req,res)=>{
+       let templatevar = {};
+       db.gettaskwithtaskId(req.params.taskId)
+       .then(result =>{
+        templatevar["task"]= result;
+        console.log(templatevar);
+        res.render("task_details",templatevar);
+       });
+     });
 
     return router;
   };

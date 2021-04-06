@@ -10,11 +10,11 @@ const gettasksWithCategory = function(categoryid,userid) {
     if(res.rows[0]) {
     return (res.rows)
     } else  return null;
-  }
-); }
-
-
+  });
+}
 exports.gettasksWithCategory = gettasksWithCategory;
+
+
 // function for inserting new object to database
 const insertNewTask = function(dataobj,title,userid){
 return db.query(`INSERT INTO tasks (title, description, imageurl, completed, user_id, category_id)
@@ -23,3 +23,14 @@ return db.query(`INSERT INTO tasks (title, description, imageurl, completed, use
 ).then (res => res.rows);
 }
 exports.insertNewTask = insertNewTask;
+
+// gettaskwith task_id
+const gettaskwithtaskId = function(taskid){
+  return  db.query(`SELECT * FROM tasks  WHERE id =$1`,[taskid])
+  .then(res => {
+    if(res.rows[0]) {
+    return (res.rows)
+    } else  return null;
+  });
+}
+exports.gettaskwithtaskId = gettaskwithtaskId;
