@@ -6,7 +6,7 @@ CREATE TABLE tasks (
   title VARCHAR (255),
   description VARCHAR (255),
   imageurl  VARCHAR(255),
-  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  created_at DATE,
   completed BOOLEAN NOT NULL,
   user_id  INTEGER REFERENCES users(id) ON DELETE CASCADE,
   category_id INTEGER REFERENCES categories(id) ON DELETE CASCADE

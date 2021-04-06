@@ -53,19 +53,6 @@ app.use("/api/users", usersRoutes(db));
 app.use("/api/widgets", widgetsRoutes(db));
 // Note: mount other resources here, using the same pattern above
 
-<<<<<<< HEAD
-app.post('/tasks', (req, res) => {
-  console.log(req.body)
-  console.log(req.body.text)
-
-  // const data = JSON.parse(req.body)
-  // console.log('data', data)
-  // findCategory(req.body.text)
-  request(`https://www.googleapis.com/customsearch/v1?key=${key}&cx=${cx}&q=${req.body.text}`, (error, response, body) => {
-  let data =JSON.parse(body);
-  console.log(data.items[0].displayLink)
-  findCategory(data.items[1], req.body.text);
-=======
 
 app.post('/new_tasks', (req, res) => {
   const title = req.body.text;
@@ -74,18 +61,18 @@ app.post('/new_tasks', (req, res) => {
 
   axios.get(url)
   .then(result => {
-    return findCategory(result.data.items[0]);
+    return findCategory(result.data.items[1]);
   })
   .then((dataobj) =>{
   console.log('dataobj:', dataobj);
   return db.query(`INSERT INTO tasks (title, description, imageurl, completed, user_id, category_id)
     VALUES ($1,$2,$3,$4,$5,$6) RETURNING * ;`,[`${title}`,`${dataobj.description}`,`${dataobj.imageurl}`,
-    `${dataobj.completed}`,userid ,`${dataobj.category_id}`]
+    `${dataobj.completed}`, userid ,`${dataobj.category_id}`]
   )
  })
  .catch(err => console.log(err));
->>>>>>> database_query_Divya
 });
+
 
 app.get('/login/:userId', (req, res) => {
   // // if using cookie-session middleware

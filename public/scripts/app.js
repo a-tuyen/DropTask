@@ -8,3 +8,14 @@ $(() => {
     }
   });;
 });
+
+
+// $.ajax({
+//   method: "GET",
+//   url: "/api/users"
+// }).done((res) => {
+//   for(user of res.users) {
+//     $("<div>").text(user.name).appendTo($("body"));
+//   }
+// });;
+// });
