@@ -71,6 +71,14 @@ module.exports = (db) => {
       });
     });
 
+    // delete a particular page
+    router.post('/:taskId/delete',(req,res)=>{
+      db.deleteTask(req.params.taskId)
+      .then((results)=>{
+        console.log(results);
+        res.redirect("/user/tasks");
+      });
+    });
 
     return router;
   };

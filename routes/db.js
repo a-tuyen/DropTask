@@ -42,3 +42,12 @@ const updateTaskcompleted = function(taskid){
   .then(res => res.rows);
 }
 exports.updateTaskcompleted = updateTaskcompleted;
+
+
+//delete a particular task
+
+const deleteTask = function(taskid){
+  return db.query(`DELETE FROM tasks WHERE tasks.id = $1 RETURNING * ;`,[taskid])
+  .then(res => res.rows);
+}
+exports.deleteTask = deleteTask;
