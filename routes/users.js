@@ -31,16 +31,32 @@ module.exports = (db) => {
     res.redirect("/")
   });
 
-  router.get('/:userid', (req, res) => {
-    let templatevarMovie = db.gettasksWithCategory(1, req.cookies.user_id);
-    let templatevarProduct = db.gettasksWithCategory(2,req.cookies.user_id);
-    let templatevarRestuarant = db.gettasksWithCategory(3,req.cookies.user_id);
-    let templatevarBooks= db.gettasksWithCategory(4,req.cookies.user_id);
-    console.log(templatevarMovie,templatevarBooks,templatevarProduct,templatevarRestuarant);
+  // homepage of user with a particular user:ID
+  router.get('/tasks', (req, res) => {
+    let templatevar = {}
+    db.gettasksWithCategory(1, req.cookies.user_id).
+    then(result =>{
+    templatevar["Movies"] = result;
+     return db.gettasksWithCategory(2, req.cookies.user_id);
 
-    res.redirect("/");
+    }
+    ).then(result => {
+      templatevar["Products"] = result;
+       return db.gettasksWithCategory(3, req.cookies.user_id);
+
+    }). then(result => {
+      templatevar["Restaurants"] = result;
+      return db.gettasksWithCategory(4, req.cookies.user_id);
+
+    }). then (result =>{
+      templatevar["Books"] = result;
+
+    }). then (()=>{
+      res.render("index", templatevar);
+      console.log(templatevar);
+    });
+
   });
-
 
   return router;
 };
