@@ -133,6 +133,10 @@ STRETCH
 - create routes for edit / delete of tasks
 
 Tues - All the functional requirements met
+- Create the path for task:id
+- Create task:id page (containing Edit, Delete, Complete)
+- Link tasks on index to task:id
+
 Wed - Making it look nice
 Thus - Finish addressing bugs and finalize / post
 

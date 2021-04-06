@@ -8,7 +8,7 @@ const gettasksWithCategory = function(categoryid,userid) {
   return  db.query(`SELECT title ,tasks.id FROM tasks JOIN users ON user_id = users.id WHERE user_id = $1 AND category_id = $2`,[userid,categoryid] )
   .then(res => {
     if(res.rows[0]) {
-    return (res.rows[0])
+    return (res.rows)
     } else  return null;
   }
 ); }
