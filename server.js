@@ -62,9 +62,9 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.get("/user/:task_id", (req, res) => {
-  res.render("task_description");
-});
+// app.get("/user/:task_id", (req, res) => {
+//   res.render("task_description");
+// });
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);

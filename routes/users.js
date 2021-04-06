@@ -59,7 +59,7 @@ module.exports = (db) => {
        .then(result =>{
         templatevar["task"]= result;
         console.log(templatevar);
-        res.render("task_details",templatevar);
+        res.render("task_description",templatevar);
        });
      });
 

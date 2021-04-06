@@ -20,14 +20,14 @@
   <%- include('header') %>
   <section>
     <div class='col1'>
-    image
+      <img src="<%= task[0].imageurl%>">
+
     </div>
     <div class='col2'>
       <div class='task_info'>
-        <p>title</p>
-        <p>description</p>
-        <p>category</p>
-        <p>created_at</p>
+        <p><%= task[0].title%></p>
+        <p><%= task[0].description%></p>
+        <p><%= task[0].type%></p>
         <div class='buttons'>
           <div>
           <button type="button" class="btn btn-primary">Submit</button>
