@@ -138,13 +138,15 @@ Tues - All the functional requirements met
 - Link tasks on index to task:id
 
 Wed - Making it look nice
-- create a page to dispay completed items
+<!-- - create a page to dispay completed items -->
 - create home page 
 - write bad paths for no google results
    - If req.body.items[0] === undefined. Render /users/tasks/:id page with missing elements so that user can add them manually
-- logout path needed (POST from button)
+<!-- - logout path needed (POST from button) -->
 - In Nav - check for cookie and only show logout if exists
 - Capitalize first word of tasks
+- Stop users from being able to edit other users tasks (if not theirs redirect to user/tasks)
+
 
 Thus - Finish addressing bugs and finalize / post
 - address modularizing app
