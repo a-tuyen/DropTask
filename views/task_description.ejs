@@ -21,28 +21,30 @@
   <section>
     <div class='col1'>
       <img src="<%= task[0].imageurl%>">
-
     </div>
     <div class='col2'>
+      <form action="/user/<%= task[0].id%>/edit" method="POST">
       <div class='task_info'>
         <p><%= task[0].title%></p>
-        <p><%= task[0].description%></p>
-        <p><%= task[0].type%></p>
-        <div class='buttons'>
-          <div>
-          <button type="button" class="btn btn-primary">Submit</button>
+        <input name="description" placeholder="<%= task[0].description%>">
+        <input name="category" placeholder="<%= task[0].type%>">
+      </div>
+      <div class='buttons'>
+        <div class="btn-group">
+            <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+          <form action="/user/<%= task[0].id%>/complete" method="POST">
+            <button type="submit" class="btn btn-success" style="margin-left: 10px">Complete</button>
+          </form>
         </div>
-        <div>
           <form action="/user/<%= task[0].id%>/delete" method="POST">
             <button type="submit" class="btn btn-danger">Delete</button>
           </form>
-          <form action="/user/<%= task[0].id%>/complete" method="POST">
-            <button type="submit" class="btn btn-success">Complete</button>
-          </form>
-        </div>
-      </div>
       </div>
     </div>
   </section>
+  <article>
+    Background box
+  </article>
 </body>
 </html>

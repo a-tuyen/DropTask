@@ -51,3 +51,10 @@ const deleteTask = function(taskid){
   .then(res => res.rows);
 }
 exports.deleteTask = deleteTask;
+
+//update category and description
+const updatedescription= function(value,taskid){
+  return db.query(`UPDATE  tasks SET description = $1 WHERE tasks.id = $2 RETURNING * ;`,[`${value}`, taskid])
+  .then(res => res.rows);
+}
+exports.updatedescription = updatedescription;
