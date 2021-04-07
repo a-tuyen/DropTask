@@ -1,30 +1,38 @@
-article {
-  // border: solid 2px green;
-  padding: 1rem;
+body > article {
+  border-radius: 5px;
+  border: solid 2px grey;
+  padding-bottom: 1rem;
+  margin-left: 17rem;
+  margin-right: 17rem;
+  margin-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-basis: 50%;
 }
 
 form {
-  // border: solid 2px blue;
   display: flex;
-  width: 1000px;
+  width: 300px;
   align-items: center;
 }
 
 textarea {
-  background: transparent;
+  background: white;
+  border-radius: 5px;
+  border: solid 1px grey;
   width: 500px;
   justify-content: center;
   flex-basis: 90%;
+  opacity: .75;
 }
 
 div > button.add {
-  // padding-top: 0.5rem;
   display: flex;
   flex-basis: 10%;
-  // align-content: center;
+  border-radius: 3px;
+  border: solid 1px grey;
+  margin-left: 1rem;
 }
 .categories {
   // border: solid 2px blue;
@@ -38,7 +46,6 @@ div > button.add {
 section {
   margin-top: 0;
   padding-top: 0;
-  border: solid 1px grey;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -48,16 +55,41 @@ section {
 }
 
 section > h2 {
-  border: solid 1px grey;
+  // border-top: none;
+  // border-right: none;
+  // border-left: none;
+  // border-bottom: solid 2px grey;
+  // border-radius: 5px;
+  border-radius: 3px;
+  border: solid 2px grey;
   margin-top: 0;
-  padding-top: 0;
+  margin-bottom: 0;
+  padding-top: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-// section > p {
-//   border: solid 3px red;
-//   padding: 0.5rem;
-//   margin: 0.1rem;
-// }
+article.category {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+article.category > p {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: dotted 2px grey;
+
+}
+
+article > p > a {
+  color: black;
+  font-family: 'Old Standard TT', serif;
+  text-decoration: none;
+}
+

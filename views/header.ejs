@@ -1,10 +1,20 @@
 <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Cinzel+Decorative:wght@400;700;900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Zilla+Slab+Highlight:wght@400;700&display=swap" rel="stylesheet">
+
 
 <nav>
+  <span class="date">
+    <div class="datenum"><script>document.write(new Date().toLocaleDateString());</script></div>
+    <div class="dayofweek"><script type="text/javascript" class="dateinnumbers">
+      var d=new Date()
+      var weekday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday",
+                  "Friday","Saturday")
+      document.write(weekday[d.getDay()])
+  </script></div>
+  </span>
   <div>
-    <span class= "task">DROPTASK;</span>
+    <span class= "drop">DROP<span class= "task"> TASK;</span></span>
   </div>
-
     <div> Hello User
     <button>Logout</button>
   </div>
