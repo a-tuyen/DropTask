@@ -4,8 +4,8 @@ const db = new Pool(dbParams);
 db.connect();
 
 //function to get items with category
-const gettasksWithCategory = function(categoryid,userid) {
-  return  db.query(`SELECT title ,tasks.id FROM tasks JOIN users ON user_id = users.id WHERE user_id = $1 AND category_id = $2 AND completed = false`,[userid,categoryid] )
+const gettasksWithCategory = function(categoryid,userid,completed) {
+  return  db.query(`SELECT title ,tasks.id FROM tasks JOIN users ON user_id = users.id WHERE user_id = $1 AND category_id = $2 AND completed = $3`,[userid,categoryid,completed] )
   .then(res => {
     if(res.rows[0]) {
     return (res.rows)
@@ -52,9 +52,17 @@ const deleteTask = function(taskid){
 }
 exports.deleteTask = deleteTask;
 
-//update category and description
+//updatdescription
 const updatedescription= function(value,taskid){
   return db.query(`UPDATE  tasks SET description = $1 WHERE tasks.id = $2 RETURNING * ;`,[`${value}`, taskid])
   .then(res => res.rows);
 }
 exports.updatedescription = updatedescription;
+
+
+//updatecategory
+const updateCategory= function(value,taskid){
+  return db.query(`UPDATE  tasks SET category_id = $1 WHERE tasks.id = $2 RETURNING * ;`,[value, taskid])
+  .then(res => res.rows);
+}
+exports.updateCategory = updateCategory;
