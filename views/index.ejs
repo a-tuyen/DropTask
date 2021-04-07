@@ -18,38 +18,36 @@
 
   <body>
     <%- include('header') %>
-    <article>
-    <h1>Add a Task</h1>
-    <form action='/user/new_tasks' method="POST" class="new-task">
-      <textarea name="text" placeholder="What do you need to do?"></textarea>
-      <div>
-        <button type="submit" class="add" >Add</button>
-      </div>
+    <article class="add-task-container">
+      <h1>Add a Task</h1>
+      <form action='/user/new_tasks' method="POST" class="new-task">
+        <textarea name="text" class="add-task-box" placeholder="What do you need to do?"></textarea>
+        <div>
+          <button type="submit" class="add" >Add</button>
+        </div>
       </form>
     </article>
-      <div class='categories'>
-        <section>
+    <div class='categories'>
+      <section>
         <h2><i class="fas fa-film"></i>Movies</h2>
         <article class="category">
         <% for(let task in Movies) { %>
           <p><a href="/user/tasks/<%= Movies[task].id %>"><%= Movies[task].title %></a></p>
         <% } %>
-      </article>
+        </article>
       </section>
       <section>
         <h2><i class="fas fa-book-open"></i> Books</h2>
         <article class="category">
-        <% for(let task in Books) { %>
-            <p><a href="/user/tasks/<%= Books[task].id %>"><%= Books[task].title %></a></p>
+          <% for(let task in Books) { %>
+          <p><a href="/user/tasks/<%= Books[task].id %>"><%= Books[task].title %></a></p>
           <% } %>
         </article>
       </section>
-        <section>
-        <h2>
-          <i class="fas fa-shopping-cart"></i>
-          Products</h2>
+      <section>
+        <h2><i class="fas fa-shopping-cart"></i>Products</h2>
         <article class="category">
-        <% for(let task in Products) { %>
+          <% for(let task in Products) { %>
             <p><a href="/user/tasks/<%= Products[task].id %>"><%= Products[task].title %></a></p>
           <% } %>
         </article>
@@ -57,11 +55,11 @@
       <section>
         <h2><i class="fas fa-utensils"></i> Restaurants</h2>
         <article class="category">
-        <% for(let task in Restaurants) { %>
+          <% for(let task in Restaurants) { %>
             <p><a href="/user/tasks/<%= Restaurants[task].id %>"><%= Restaurants[task].title %></a></p>
           <% } %>
         </article>
       </section>
-      </div>
+    </div>
   </body>
 </html>

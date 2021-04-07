@@ -1,4 +1,4 @@
-body > article {
+body > article.add-task-container {
   border-radius: 5px;
   border: solid 2px grey;
   padding-bottom: 1rem;
@@ -11,13 +11,13 @@ body > article {
   flex-basis: 50%;
 }
 
-form {
+form.new-task {
   display: flex;
   width: 300px;
   align-items: center;
 }
 
-textarea {
+textarea.add-task-box {
   background: white;
   border-radius: 5px;
   border: solid 1px grey;
@@ -27,20 +27,18 @@ textarea {
   opacity: .75;
 }
 
-div > button.add {
+form.new-task > div > button.add {
   display: flex;
   flex-basis: 10%;
   border-radius: 3px;
   border: solid 1px grey;
   margin-left: 1rem;
 }
-.categories {
+body > div.categories {
   // border: solid 2px blue;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-
-
 }
 
 section {
@@ -77,7 +75,7 @@ article.category {
   align-items: stretch;
 }
 
-article.category > p {
+body > div.categories > section > article.category > p {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   border-top: none;
