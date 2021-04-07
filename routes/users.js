@@ -82,6 +82,7 @@ module.exports = (db) => {
      if(req.body.description){
        db.updatedescription( req.body.description,req.params.taskId)
      }
+     console.log('req.body:', req.body)
     //  if(req.body.category){
     // db.updatecategory(category,req.body.category,req.params.taskId)
     // }
