@@ -25,5 +25,3 @@ const  findCategory  = function(data){
 };
 
 module.exports = findCategory;
-
-

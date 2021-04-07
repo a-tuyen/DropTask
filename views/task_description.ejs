@@ -27,7 +27,14 @@
       <div class='task_info'>
         <p><%= task[0].title%></p>
         <input name="description" placeholder="<%= task[0].description%>">
-        <p><%= task[0].type%></p>
+        <select name="type">
+          <option value="None" selected disabled hidden><%= task[0].type%></option>
+          <option value="DeSoto">Movie</option>
+          <option value="Hillsboro">Product</option>
+          <option value="Grandview">Restaurant</option>
+          <option value="Festus">Book</option>
+      </select>
+        <!-- <p><%= task[0].type%></p> -->
       </div>
       <div class='buttons'>
         <div class="btn-group">
