@@ -36,9 +36,6 @@ const widgetsRoutes = require("./routes/widgets");
 // const poolFactory = require('pg/lib/pool-factory');
 
 
-// to be moved out to router route
-const findCategory = require('./routes/api');
-
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
@@ -51,19 +48,18 @@ app.use("/user", usersRoutes(db));
 app.get('/login/:userId', (req, res) => {
   res.cookie('user_id', req.params.userId);
   // redirect the user somewhere
-  res.redirect('/');
+  res.redirect('/user/tasks');
 });
 
+app.post('/logout',(req,res)=>{
+  res.clearCookie("user_id");
+  res.redirect("/");
+})
 
 // Home page
-// Warning: avoid creating more routes in this file!
-// Separate them into separate routes files (see above).
+
 app.get("/", (req, res) => {
   res.render("welcome");
-});
-
-app.get("/user/completed", (req, res) => {
-  res.render("completed");
 });
 
 // app.get("/user/:task_id", (req, res) => {
