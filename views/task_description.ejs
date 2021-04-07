@@ -26,7 +26,7 @@
       <form action="/user/<%= task[0].id%>/edit" method="POST">
       <div class='task_info'>
         <p><%= task[0].title%></p>
-        <textarea><%= task[0].description%></textarea>
+        <input name="description" placeholder="<%= task[0].description%>">
         <p><%= task[0].type%></p>
       </div>
       <div class='buttons'>

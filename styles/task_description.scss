@@ -56,5 +56,7 @@ article {
   height: 80px;
   align-items: center;
   border-radius: 10px;
-  border-left-color: 3px solid red;
+  border-left-style: solid;
+  border-left-color: red;
+  border-left-width: 6px;
 }

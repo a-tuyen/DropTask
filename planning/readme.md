@@ -138,7 +138,11 @@ Tues - All the functional requirements met
 - Link tasks on index to task:id
 
 Wed - Making it look nice
+
 Thus - Finish addressing bugs and finalize / post
+- address modularizing app
+- stretch work
+- reherse presentation
 
 ## Stretch
 Load new tasks in real time
