@@ -5,7 +5,6 @@ const cx = process.env.DB_CX;
 
 const  findCategory  = function(data){
   let dataobj={};
-
   if (data.displayLink === "www.imdb.com") {
     category = 1;//categories of movie
   } else if(data.displayLink === "www.amazon.ca") {

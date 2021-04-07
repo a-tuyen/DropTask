@@ -19,12 +19,27 @@ module.exports = (db) => {
     const url = `https://www.googleapis.com/customsearch/v1?key=${key}&cx=${cx}&q=${req.body.text}`;
     axios.get(url)
       .then(result => {
-        return findCategory(result.data.items[1]);
+        console.log(result.data.items)
+        let dataobj ={};
+        if(result.data.items === undefined){
+          dataobj["category_id"] = 5;
+          dataobj["description"] = "xsdcv";
+          dataobj["created_at"] = Date.now();
+          dataobj["imageurl"] = "https://rokusek.com/wp-content/uploads/2019/12/female-shrug-emoji-1-768x768.jpg";
+          dataobj["completed"] = false;
+          return dataobj;
+        } else {
+          return findCategory(result.data.items[0]);
+         }
       })
       .then((dataobj) => {
-        db.insertNewTask(dataobj, title, userid);
-      }).then(() => {
-        res.redirect("/user/tasks");
+       return db.insertNewTask(dataobj, title, userid);
+      }).then((result) =>{
+       if(result[0].category_id !== 5){
+        res.redirect(`/user/tasks`);
+       } else{
+        res.redirect(`/user/tasks/${result[0].id}`);
+       }
       })
       .catch(err => console.log(err));
   });
@@ -46,6 +61,7 @@ module.exports = (db) => {
         return db.gettasksWithCategory(4, req.cookies.user_id,false);
       }).then(result => {
         templatevar["Books"] = result;
+
         res.render("index", templatevar);
       });
   });
@@ -57,6 +73,7 @@ module.exports = (db) => {
     db.gettaskwithtaskId(req.params.taskId)
       .then(result => {
         templatevar["task"] = result;
+        console.log(templatevar);
         res.render("task_description", templatevar);
       });
   });
@@ -131,7 +148,6 @@ module.exports = (db) => {
         return db.gettasksWithCategory(4, req.cookies.user_id,true);
       }).then(result => {
         templatevar["Books"] = result;
-        console.log(templatevar)
         res.render("completed", templatevar);
       });
   });
