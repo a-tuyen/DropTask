@@ -132,11 +132,9 @@ module.exports = (db) => {
       }).then(result => {
         templatevar["Books"] = result;
         console.log(templatevar)
-        res.render("index", templatevar);
+        res.render("completed", templatevar);
       });
   });
-
-
 
   return router;
 };
