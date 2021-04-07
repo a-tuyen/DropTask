@@ -43,7 +43,6 @@ module.exports = (db) => {
         return db.gettasksWithCategory(4, req.cookies.user_id);
       }). then (result =>{
         templatevar["Books"] = result;
-      }). then (()=>{
         res.render("index", templatevar);
       });
     });
@@ -53,9 +52,37 @@ module.exports = (db) => {
        db.gettaskwithtaskId(req.params.taskId)
        .then(result =>{
         templatevar["task"]= result;
-        console.log(templatevar);
         res.render("task_description",templatevar);
        });
      });
+
+    //complete a particular page
+    router.post('/:taskId/complete',(req,res)=>{
+      db.updateTaskcompleted(req.params.taskId)
+      .then((results)=>{
+        res.redirect("/user/tasks");
+      });
+    });
+
+    // delete a particular page
+    router.post('/:taskId/delete',(req,res)=>{
+      db.deleteTask(req.params.taskId)
+      .then((results)=>{
+        res.redirect("/user/tasks");
+      });
+    });
+
+    //Edit a particular task
+    router.post('/:taskId/edit',(req,res)=>{
+     if(req.body.description){
+       db.updatedescription( req.body.description,req.params.taskId)
+     }
+     console.log('req.body:', req.body)
+    //  if(req.body.category){
+    // db.updatecategory(category,req.body.category,req.params.taskId)
+    // }
+      res.redirect("/user/tasks");
+    });
     return router;
   };
+

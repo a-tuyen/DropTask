@@ -39,11 +39,46 @@ section {
   justify-content: space-between;
 }
 
-.col2 > .task_info > textarea {
+.col2 > form > .task_info > textarea {
   display: flex;
   resize: none;
-  margin-bottom: 15px;;
+  margin-bottom: 15px;
   width: 100%;
-  padding-left: 15px;
+  padding: 15px;
 
+}
+
+article {
+  display: flex;
+  margin: 40px;
+  padding-left: 15px;
+  background-color: green;
+  height: 80px;
+  align-items: center;
+  border-radius: 10px;
+  border-left-style: solid;
+  border-left-color: red;
+  border-left-width: 6px;
+}
+
+select {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+::placeholder {
+  color: black;
+  opacity: 1;
+}
+
+.task_info > input {
+  display: flex;
+  width: 100%;
+}
+
+.task_info > select {
+  display: flex;
+  width: 25%;
 }

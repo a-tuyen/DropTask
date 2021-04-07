@@ -138,7 +138,15 @@ Tues - All the functional requirements met
 - Link tasks on index to task:id
 
 Wed - Making it look nice
+- create a page to dispay completed items
+- create home page 
+- write bad paths for no google results
+- logout path needed (POST from button)
+
 Thus - Finish addressing bugs and finalize / post
+- address modularizing app
+- stretch work
+- reherse presentation
 
 ## Stretch
 Load new tasks in real time
