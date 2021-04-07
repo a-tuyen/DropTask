@@ -4,15 +4,12 @@
  *   these routes are mounted onto /users
  * See: https://expressjs.com/en/guide/using-middleware.html#middleware.router
  */
-
 const express = require('express');
 const axios = require('axios');
 const router = express.Router();
 const key = process.env.DB_KEY;
 const cx = process.env.DB_CX;
 const findCategory = require('./api');
-
-
 module.exports = (db) => {
   // route for submitting new tasks
     router.post('/new_tasks', (req, res) => {
@@ -30,7 +27,6 @@ module.exports = (db) => {
         })
         .catch(err => console.log(err));
     });
-
     // homepage of user with a particular user:ID
     router.get('/tasks', (req, res) => {
       let templatevar = {}
@@ -50,7 +46,6 @@ module.exports = (db) => {
         res.render("index", templatevar);
       });
     });
-
     //renders a page for specific task
      router.get('/tasks/:taskId',(req,res)=>{
        let templatevar = {};

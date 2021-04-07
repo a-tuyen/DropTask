@@ -1,6 +1,70 @@
 nav {
-  border: solid 1px black;
+  // border: solid 3px red;
+  // font-family: 'Zilla Slab Highlight', cursive;
+  // font-weight: 700;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  padding: 1.5rem;
+  height: 120px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  background-color: lightgreen;
+  opacity: 0.9;
+}
+
+// span .task {
+//   font-family: 'Zilla Slab Highlight', cursive;
+//   font-size: xx-large;
+// }
+
+nav > span.date {
+  // border: solid 3px red;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+div.datenum {
+  display: flex;
+  font-size: large;
+}
+
+div.dayofweek {
+  font-family: 'Old Standard TT', serif;
+  font-weight: 700;
+  display: flex;
+  font-size: xx-large;
+}
+
+
+nav > div > span.drop {
+  font-family: 'Zilla Slab Highlight', cursive;
+  font-weight: 700;
+  font-size: 50px;
+  opacity: 1;
+}
+
+span.drop > span.task {
+  font-family: 'Zilla Slab Highlight', cursive;
+  font-weight: 400;
+  font-size: 50px;
+}
+
+.log button {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

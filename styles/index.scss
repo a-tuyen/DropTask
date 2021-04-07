@@ -1,43 +1,93 @@
-article {
-  border: solid 2px green;
+body > article.add-task-container {
+  border-radius: 5px;
+  border: solid 2px grey;
+  padding-bottom: 1rem;
+  margin-left: 17rem;
+  margin-right: 17rem;
+  margin-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-basis: 50%;
 }
 
-form {
-  border: solid 2px black;
+form.new-task {
   display: flex;
+  width: 300px;
+  align-items: center;
 }
 
-button {
-  padding-top: 0.5rem;
-  // display: flex;
-  // align-content: center;
+textarea.add-task-box {
+  background: white;
+  border-radius: 5px;
+  border: solid 1px grey;
+  width: 500px;
+  justify-content: center;
+  flex-basis: 90%;
+  opacity: .75;
 }
-.categories {
-  border: solid 2px blue;
+
+form.new-task > div > button.add {
+  display: flex;
+  flex-basis: 10%;
+  border-radius: 3px;
+  border: solid 1px grey;
+  margin-left: 1rem;
+}
+body > div.categories {
+  // border: solid 2px blue;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
 
 section {
-  border: solid 2px red;
+  margin-top: 0;
+  padding-top: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  align-content: center;
   flex-basis: 22%;
+  height: 800px;
 }
 
-section > h1 {
-  border: solid 2px red;
+section > h2 {
+  // border-top: none;
+  // border-right: none;
+  // border-left: none;
+  // border-bottom: solid 2px grey;
+  // border-radius: 5px;
+  border-radius: 3px;
+  border: solid 2px grey;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-section > p {
-  padding: 0.5rem;
-  margin: 0.1rem;
+article.category {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
 }
+
+body > div.categories > section > article.category > p {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: dotted 2px grey;
+
+}
+
+article > p > a {
+  color: black;
+  font-family: 'Old Standard TT', serif;
+  text-decoration: none;
+}
+

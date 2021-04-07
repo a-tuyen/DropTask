@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/index.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Cinzel+Decorative:wght@400;700;900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Zilla+Slab+Highlight:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-a11y="true"></script>
 
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
@@ -15,43 +18,48 @@
 
   <body>
     <%- include('header') %>
-    <article>
-    <h2>Add a Task</h2>
-    <form action='/user/new_tasks' method="POST" class="new-task">
-      <textarea name="text" id="task-text" placeholder="What do you need to do?"></textarea>
-      <div>
-        <button type="submit">Add</button>
-      </div>
+    <article class="add-task-container">
+      <h1>Add a Task</h1>
+      <form action='/user/new_tasks' method="POST" class="new-task">
+        <textarea name="text" class="add-task-box" placeholder="What do you need to do?"></textarea>
+        <div>
+          <button type="submit" class="add" >Add</button>
+        </div>
       </form>
     </article>
-      <div class='categories'>
-        <section>
-        <h1>Movies</h1>
+    <div class='categories'>
+      <section>
+        <h2><i class="fas fa-film"></i>Movies</h2>
+        <article class="category">
         <% for(let task in Movies) { %>
           <p><a href="/user/tasks/<%= Movies[task].id %>"><%= Movies[task].title %></a></p>
         <% } %>
+        </article>
       </section>
       <section>
-        <h1>Books</h1>
-        <% for(let task in Books) { %>
-            <p><a href="/user/tasks/<%= Books[task].id %>"><%= Books[task].title %></a></p>
+        <h2><i class="fas fa-book-open"></i> Books</h2>
+        <article class="category">
+          <% for(let task in Books) { %>
+          <p><a href="/user/tasks/<%= Books[task].id %>"><%= Books[task].title %></a></p>
           <% } %>
-
+        </article>
       </section>
-        <section>
-        <h1>Products</h1>
-        <% for(let task in Products) { %>
+      <section>
+        <h2><i class="fas fa-shopping-cart"></i>Products</h2>
+        <article class="category">
+          <% for(let task in Products) { %>
             <p><a href="/user/tasks/<%= Products[task].id %>"><%= Products[task].title %></a></p>
           <% } %>
-
+        </article>
       </section>
       <section>
-        <h1>Restaurants</h1>
-        <% for(let task in Restaurants) { %>
+        <h2><i class="fas fa-utensils"></i> Restaurants</h2>
+        <article class="category">
+          <% for(let task in Restaurants) { %>
             <p><a href="/user/tasks/<%= Restaurants[task].id %>"><%= Restaurants[task].title %></a></p>
           <% } %>
-
+        </article>
       </section>
-      </div>
+    </div>
   </body>
 </html>

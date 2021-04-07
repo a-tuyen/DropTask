@@ -59,10 +59,10 @@ app.get('/login/:userId', (req, res) => {
 // Warning: avoid creating more routes in this file!
 // Separate them into separate routes files (see above).
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("welcome");
 });
 
-app.get("/completed", (req, res) => {
+app.get("/user/completed", (req, res) => {
   res.render("completed");
 });
 
