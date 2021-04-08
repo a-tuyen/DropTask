@@ -164,6 +164,37 @@ Thus - Finish addressing bugs and finalize / post
 - create logo (if we want) 
 - stretch work
 
+Presentation: 
+COLE will share screen and navigate app.
+COLE ------
+- Intro - What app we chose and why
+- Who did what
+ - Divya - backend routes
+ - Cole - Database / front end
+ - Amanda - Front end
+<!-- - Our approach
+- ERD / database setup -->
+- DEMO APP
+  - viewing home page
+  - showing task submission
+AMANDA ------
+  - taskID page
+  - Complete / Delete / Edit (submit)
+  - Completed page
+  - Back to task ID page
+  - Show off delete button
+  - Back to task ID page
+  - Show edit button
+DIVYA ------
+  - Show sad path (when no result found)
+- Stretch / future goals
+  - Responsive design / mobile friendly
+  - More categories
+- Challenges
+  - How / What api's
+  - Promises
+- Questions?
+
 ## Stretch
 Load new tasks in real time
 Dynamic view for how many categories to view
