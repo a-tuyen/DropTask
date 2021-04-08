@@ -25,3 +25,4 @@ INSERT INTO categories (type) VALUES ('Movie');
 INSERT INTO categories (type) VALUES ('Product');
 INSERT INTO categories (type) VALUES ('Restaurant');
 INSERT INTO categories (type) VALUES ('Book');
+INSERT INTO categories (type) VALUES ('Uncategorized');

@@ -5,22 +5,29 @@ const cx = process.env.DB_CX;
 
 const  findCategory  = function(data){
   let dataobj={};
-
-  if (data.displayLink === "www.imdb.com") {
+  if (data=== undefined) {
+    dataobj["category_id"] = 5;//uncategorised
+    dataobj["description"] = "No description found";
+    dataobj["created_at"] = Date.now();
+    dataobj["imageurl"] = "https://rokusek.com/wp-content/uploads/2019/12/female-shrug-emoji-1-768x768.jpg";
+    dataobj["completed"] = false;
+  } else {
+  if (data[0].displayLink === "www.imdb.com") {
     category = 1;//categories of movie
-  } else if(data.displayLink === "www.amazon.ca") {
+  } else if(data[0].displayLink === "www.amazon.ca") {
     category = 2;//products
-  }else if(data.displayLink === "www.yelp.ca") {
+  }else if(data[0].displayLink === "www.yelp.ca") {
     category = 3 ;//food
   } else {
     category = 4 //to read;
   }
 
   dataobj["category_id"] = category;
-  dataobj["description"] = data.snippet;
+  dataobj["description"] = data[0].snippet;
   dataobj["created_at"] = Date.now();
-  dataobj["imageurl"] = data.pagemap.cse_thumbnail[0].src
+  dataobj["imageurl"] = data[0].pagemap.cse_thumbnail[0].src
   dataobj["completed"] = false;
+ }
   return dataobj;
 };
 
