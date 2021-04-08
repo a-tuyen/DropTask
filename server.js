@@ -11,8 +11,7 @@ const app        = express();
 const morgan     = require('morgan');
 var cookieParser = require('cookie-parser');
 app.use(cookieParser());
-
-const db = require("./routes/db.js")
+const db = require("./lib/database_query.js")
 
 // Load the logger first so all (static) HTTP requests are logged to STDOUT
 // 'dev' = Concise output colored by response status for development use.
@@ -32,44 +31,34 @@ app.use(express.static("public"));
 // Separated Routes for each Resource
 // Note: Feel free to replace the example routes below with your own
 const usersRoutes = require("./routes/users");
-const widgetsRoutes = require("./routes/widgets");
-// const poolFactory = require('pg/lib/pool-factory');
-
-
 
 // Mount all resource routes
-// Note: Feel free to replace the example routes below with your own
 app.use("/user", usersRoutes(db));
-// app.use("/api/widgets", widgetsRoutes(db));
-// Note: mount other resources here, using the same pattern above
 
 
+// Home page
+app.get("/", (req, res) => {
+  res.render("welcome");
+});
 
+//Route for Login
 app.get('/login/:userId', (req, res) => {
   res.cookie('user_id', req.params.userId);
-  // redirect the user somewhere
   res.redirect('/user/tasks');
 });
 
+//Route for Logout
 app.post('/logout',(req,res)=>{
   res.clearCookie("user_id");
   res.redirect("/");
 })
 
-// Home page
+//Route for register
+app.get("/register",(req,res)=>{
+  res.render("index");
+})
 
-app.get("/", (req, res) => {
-  res.render("welcome");
-});
-
-// app.get("/register", (req, res) => {
-//   res.render("register");
-// });
-
-// app.get("/user/:task_id", (req, res) => {
-//   res.render("task_description");
-// });
-
+//Listening for PORT
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
 });
