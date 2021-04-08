@@ -65,3 +65,9 @@ const updateCategory= function(value,taskid){
   .then(res => res.rows);
 }
 exports.updateCategory = updateCategory;
+
+const getuserbyId = function (userid){
+  return db.query(`SELECT *  FROM  users  WHERE id = $1`,[userid])
+  .then(res => res.rows);
+}
+exports.getuserbyId = getuserbyId;
