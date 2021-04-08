@@ -31,26 +31,31 @@
     <div class='col2'>
       <form action="/user/<%= task[0].id%>/edit" method="POST">
         <div class='task_info'>
-          <p><%= task[0].title%></p>
-          <input name="description" placeholder="<%= task[0].description%>">
-          <select name="type" class="input">
+          <h3 class="task-title"><%= task[0].title%></h3>
+          <textarea name="description"><%= task[0].description%></textarea>
+          <div class="label-input-container">
+            <select name="type" class="input">
             <option value="None" selected disabled hidden><%= task[0].type%></option>
             <option value="Movie">Movie</option>
             <option value="Product">Product</option>
             <option value="Restaurant">Restaurant</option>
             <option value="Book">Book</option>
           </select>
-        </div>
-        <div class='buttons'>
+          <div class='container-buttons'>
             <button type="submit" class="submit">Submit</button>
-      </form>
-          <form action="/user/<%= task[0].id%>/complete" method="POST">
-            <button type="submit">Complete</button>
-          </form>
-          <form action="/user/<%= task[0].id%>/delete" method="POST">
-            <button type="submit">Delete</button>
-          </form>
-      </div>
+            <div class="comp-del-buttons">
+            </form>
+              <form action="/user/<%= task[0].id%>/complete" method="POST">
+                <button type="submit">Complete</button>
+              </form>
+              <form action="/user/<%= task[0].id%>/delete" method="POST">
+                <button type="submit">Delete</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+    </div>
     </div>
   </section>
 </body>
