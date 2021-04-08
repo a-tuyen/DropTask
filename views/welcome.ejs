@@ -11,33 +11,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Cinzel+Decorative:wght@400;700;900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Zilla+Slab+Highlight:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-a11y="true"></script>
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
   </head>
 
   <body>
+    <!-- <nav>
+      <div class="left">
+        <span class="drop">DROP<span class="task"> TASK;</span></span>
+        <form action="/user/completed" method="GET">
+          <button>Completed Tasks</button>
+        </form>
+      </div>
+      <div>
+          <form action="/login" method="GET">
+            <button>Login</button>  </div>
+          </form>
+          <form action="register" method="GET">
+            <button>Register</button></div>
+          </form>
+        </div>
+    </nav> -->
 
     <article class="welcome">
       <h1>Welcome to</h1>
       <span class= "drop">DROP<span class= "task"> TASK;</span></span>
-      <p>DROPTASK; is a task manager app that lets you quickly input tasks and it will be sorted and displayed into an appropriate list for you.
-        Go ahead, enter in any movies you haven't gotten around to seeing yet, restaurants that are on your must-try list, hot new products that you've got your eye on or that NYT bestselling book that you aspire to read one day, DROPTASK; will take care of the sorting and storing for you!
+      <br>
+      <p>DROPTASK; is a task manager app that lets you quickly input tasks and then sorts and displays it in an appropriate list for you.
+        <br><br>Go ahead, enter in any movies you haven't gotten around to seeing yet, restaurants that are on your must-try list, hot new products that you've got your eye on or that NYT bestseller that you aspire to read one day. DROPTASK; will take care of the sorting and storing for you!
       </p>
-      <h4>To begin, please Login or Register</h4>
-        <div>
+      <h4>To begin, please <a href="/login/1">LOGIN</a> or <a href="/register">REGISTER</a></h4>
+        <!-- <div>
           <form method="GET" action="/login">
             <button type="submit" class="add">Login</button>
           </form>
           <form method="GET" action="/register">
             <button type="submit" class="add">Register</button>
           </form>
-        </div>
-          <!-- MUST REMOVE! -->
-          <div>
-          <a href="/login/1">LOGIN</a>
-          <a href="/user/tasks/">   GO TO TASKS</a>
-        </div>
+        </div> -->
       </form>
     </article>
   </body>

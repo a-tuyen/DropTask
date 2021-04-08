@@ -11,37 +11,30 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: lightgreen;
-  opacity: 0.9;
+  background-color: white;
+  opacity: 90%;
 }
 
-// span .task {
-//   font-family: 'Zilla Slab Highlight', cursive;
-//   font-size: xx-large;
+
+// nav > span.date {
+//   // border: solid 3px red;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   align-items: center;
 // }
 
-nav > span.date {
-  // border: solid 3px red;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+// div.datenum {
+//   display: flex;
+//   font-size: large;
+// }
+
+div.left > a {
+  color: black;
+  text-decoration: none;
 }
 
-div.datenum {
-  display: flex;
-  font-size: large;
-}
-
-div.dayofweek {
-  font-family: 'Old Standard TT', serif;
-  font-weight: 700;
-  display: flex;
-  font-size: xx-large;
-}
-
-
-nav > .left > span.drop {
+nav > .left > a > span.drop {
   font-family: 'Zilla Slab Highlight', cursive;
   font-weight: 700;
   font-size: 50px;
@@ -54,27 +47,70 @@ span.drop > span.task {
   font-size: 50px;
 }
 
-.left button {
+// .left button {
+//   display: flex;
+//   margin-left: 15px;
+//   margin-right: 10px;
+//   padding-left: 0px;
+//   padding-right: 0px;
+
+// }
+
+// .left {
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+// }
+
+div.left {
+  // border: solid 1px blue;
   display: flex;
-  margin-left: 15px;
-  margin-right: 10px;
-  padding-left: 0px;
-  padding-right: 0px;
+  flex-basis: 50%;
+}
+
+div.right {
+  // border: solid 1px blue;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  justify-content: center;
+  flex-basis: 50%;
+}
+
+div.page-links {
+  // border: solid 1px blue;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+  margin-top: 0.5rem;
+  // padding-left: 1rem;
+  // padding-right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 
 }
 
-.left {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+a {
+  padding-right: 1rem;
 }
 
-.right {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+a:hover {
+  color: red;
+
 }
 
-.right > form >button {
-  margin-left: 10px;
+div.username > span {
+  font-family: 'Qwigley', cursive;
+  font-size: 350%;
+}
+
+form > button {
+  background-color: rgb(152, 194, 152);
+  color: white;
+  margin-bottom: 0.5rem;
+  margin-right: 1rem;
+  border-radius: 5px;
+  border: solid 1px  rgb(152, 194, 152);
 }

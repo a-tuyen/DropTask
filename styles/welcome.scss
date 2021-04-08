@@ -1,9 +1,14 @@
 article.welcome {
-  // border: solid 2px red;
+  background-color: white;
+  border-radius: 2px;
+  margin-left: 20rem;
+  margin-right: 20rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  opacity: 85%;
 
 }
 
@@ -22,11 +27,10 @@ span.drop > span.task {
 
 article.welcome > p {
   // border: solid 2px green;
-  padding-left: 7rem;
-  padding-right: 7rem;
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
+
 
 }

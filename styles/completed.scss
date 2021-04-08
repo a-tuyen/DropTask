@@ -1,14 +1,16 @@
 body > article.add-task-container {
-  border-radius: 5px;
-  border: solid 2px grey;
+  // border-radius: 5px;
+  // border: solid 2px grey;
+  // background-color: white;
   padding-bottom: 1rem;
-  margin-left: 17rem;
-  margin-right: 17rem;
+  margin-left: 30rem;
+  margin-right: 30rem;
   margin-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   flex-basis: 50%;
+  // opacity: 80%;
 }
 
 form.new-task {
@@ -42,14 +44,22 @@ body > div.categories {
 }
 
 section {
+  opacity: 90%;
+   border-radius: 2px;
+  // border: solid 2px red;
   margin-top: 0;
-  padding-top: 0;
+  margin-bottom: 2rem;
+  // padding-top: 1rem;
+  // padding-left: 1rem;
+  // padding-right: 1rem;
+  padding: 1rem;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-content: center;
-  flex-basis: 22%;
-  height: 800px;
+  flex-basis: 23%;
+  // height: 600px;
 }
 
 section > h2 {
@@ -58,14 +68,16 @@ section > h2 {
   // border-left: none;
   // border-bottom: solid 2px grey;
   // border-radius: 5px;
-  border-radius: 3px;
-  border: solid 2px grey;
+  // border-radius: 3px;
+  color:black;
+  // border: solid 2px grey;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
   padding-top: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 article.category {

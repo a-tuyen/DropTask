@@ -1,11 +1,20 @@
 // See: https://sass-lang.com/
 
 body {
-  font-family: 'Old Standard TT', serif;
+  font-family: 'Open Sans', monospace;
   margin-top: 140px;
-  background-color: linear-gradient(grey,blue);
-  background-image: url("https://www.transparenttextures.com/patterns/hoffman.png");
-
+  background-color: #FFB48F;
+  // background-image: url("https://www.transparenttextures.com/patterns/crossword.png");
+  // background-image: url("https://www.transparenttextures.com/patterns/hoffman.png");
+  // background-image: url("https://www.transparenttextures.com/patterns/wave-grid.png");
+  // background-image: url("https://www.transparenttextures.com/patterns/whitey.png");
+  // background-image: url("https://cdn.pixabay.com/photo/2017/10/31/19/05/web-design-2906159_1280.jpg");
+  // background-image: url("https://image.freepik.com/free-vector/futuristic-city_46706-666.jpg");
+  // background-image: url("https://image.freepik.com/free-vector/watercolor-pastel-sky-background_23-2148898822.jpg");
+  background-image: url("https://image.freepik.com/free-vector/hand-painted-watercolor-nature-background-with-empty-space_52683-60843.jpg");
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: cover;
   h1 {
     color: #244751;
   }

@@ -1,40 +1,23 @@
 <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Cinzel+Decorative:wght@400;700;900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Zilla+Slab+Highlight:wght@400;700&display=swap" rel="stylesheet">
-
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;400;700&family=Qwigley&display=swap" rel="stylesheet">
 
 <nav>
-      <!-- <div class="datenum"><script>document.write(new Date().toLocaleDateString());</script></div>
-      <div class="dayofweek"><script type="text/javascript" class="dateinnumbers">
-        var d=new Date()
-        var weekday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday",
-                    "Friday","Saturday")
-        document.write(weekday[d.getDay()])
-      </script> -->
   <div class="left">
-    <span class="drop">DROP<span class="task"> TASK;</span></span>
-    <form action="/user/completed" method="GET">
-      <button>Completed Tasks</button>
-    </form>
-  </div>
-  <div>
-  <% if (Movies[0].name) { %>
-    <div> Hello <%= Movies[0].name %>!
-      <form method="POST" action="/logout">
-        <button type="submit">Logout</button>
-      </form>
+    <a href="/user/tasks"><span class="drop">DROP<span class="task"> TASK;</span></span></a>
     </div>
-    <% } else { %>
-      <form action="/login" method="GET">
-        <button>Completed Tasks</button>  </div>
-      </form>
-      <form action="register" method="GET">
-        <button>Completed Tasks</button>  </div>
-      </form>
-      <% } %>
+    <div class="right">
+      <div class="page-links">
+        <a href="/user/1">MY ACCOUNT</a>
+        <a href="/user/completed">COMPLETED TASKS</a>
+        <form action="/logout" method="GET">
+          <button>LOGOUT</button>
+        </form>
+      </div>
+      <div class="username">
+        <span>Hello Divya</span>
+      </div>
     </div>
-    <!-- <div> Hello User
-      <form method="POST" action="/logout">
-        <button type="submit">Logout</button>
-      </form>
-  </div> -->
+
 </nav>
