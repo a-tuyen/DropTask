@@ -99,8 +99,7 @@ module.exports = (db) => {
         newCategory_id = 1;
       }
     }
-
-    //Update the description and Category
+    //check howmany parameters are changed AND CORRECTE ACCORDINGLY
     if (req.body.description && req.body.type) {
       db.updatedescription(req.body.description, req.params.taskId)
       .then(() => {
@@ -151,11 +150,11 @@ module.exports = (db) => {
       let userid = req.cookies.user_id;
       let templatevar = {};
       db.getuserbyId(userid)
-      .then((result) => {
-        templatevar["user"] = result;
-        console.log(templatevar);
-        res.render("profile", templatevar)
-      }).catch(err => console.log(err));
+        .then((result) => {
+          templatevar["user"] = result;
+          console.log(templatevar);
+          res.render("profile", templatevar)
+        }).catch(err => console.log(err));
     } else {
       res.redirect("/");
     }

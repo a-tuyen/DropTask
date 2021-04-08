@@ -11,7 +11,7 @@ const app        = express();
 const morgan     = require('morgan');
 var cookieParser = require('cookie-parser');
 app.use(cookieParser());
-const db = require("./routes/database.js")
+const db = require("./lib/database_query.js")
 
 // Load the logger first so all (static) HTTP requests are logged to STDOUT
 // 'dev' = Concise output colored by response status for development use.
@@ -35,6 +35,12 @@ const usersRoutes = require("./routes/users");
 // Mount all resource routes
 app.use("/user", usersRoutes(db));
 
+
+// Home page
+app.get("/", (req, res) => {
+  res.render("welcome");
+});
+
 //Route for Login
 app.get('/login/:userId', (req, res) => {
   res.cookie('user_id', req.params.userId);
@@ -47,10 +53,6 @@ app.post('/logout',(req,res)=>{
   res.redirect("/");
 })
 
-// Home page
-app.get("/", (req, res) => {
-  res.render("welcome");
-});
 
 //Route for register
 app.get("/register",(req,res)=>{
