@@ -1,8 +1,4 @@
-require('dotenv').config();
-const axios = require('axios');
-const key = process.env.DB_KEY;
-const cx = process.env.DB_CX;
-
+// Function to find the Categorize the object and Send data.
 const  findCategory  = function(data){
   let dataobj={};
   if (data=== undefined) {
@@ -12,8 +8,9 @@ const  findCategory  = function(data){
     dataobj["imageurl"] = "https://rokusek.com/wp-content/uploads/2019/12/female-shrug-emoji-1-768x768.jpg";
     dataobj["completed"] = false;
   } else {
+    console.log(data)
   if (data[0].displayLink === "www.imdb.com") {
-    category = 1;//categories of movie
+    category = 1;// Movie
   } else if(data[0].displayLink === "www.amazon.ca") {
     category = 2;//products
   }else if(data[0].displayLink === "www.yelp.ca") {
