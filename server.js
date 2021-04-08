@@ -62,6 +62,9 @@ app.get("/", (req, res) => {
   res.render("welcome");
 });
 
+// app.get("/register", (req, res) => {
+//   res.render("register");
+// });
 
 // app.get("/user/:task_id", (req, res) => {
 //   res.render("task_description");
