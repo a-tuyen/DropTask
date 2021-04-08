@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+  <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/profile.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+
+
+
+  <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+  <script type="text/javascript" src="/scripts/app.js"></script>
+</head>
+
+</head>
+<body>
+  <%- include('header') %>
+  <section>
+    <div class='col1'>
+      <img src="https://t4.ftcdn.net/jpg/03/32/59/65/360_F_332596535_lAdLhf6KzbW6PWXBWeIFTovTii1drkbT.jpg">
+    </div>
+    <div class='col2'>
+      <form>
+      <div class='task_info'>
+        <p>Name</p>
+        <input name="description" placeholder="Email Address">
+        <input name="description" placeholder="Password">
+        <input name="description" placeholder="Confirm Password">
+      </div>
+      <div class='buttons'>
+        <div class="btn-group">
+            <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+          <form>
+            <button type="submit" class="btn btn-success" style="margin-left: 10px">Complete</button>
+          </form>
+        </div>
+          <form>
+            <button type="submit" class="btn btn-danger">Delete</button>
+          </form>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
