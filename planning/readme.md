@@ -147,6 +147,7 @@ Wed - Making it look nice
 <!-- - Capitalize first word of tasks -->
 <!-- - Stop users from being able to edit other users tasks (if not theirs redirect to user/tasks) -->
 - hardcode Divya to the page in navbar
+- logo to link to tasks page
 
 
 Thus - Finish addressing bugs and finalize / post
