@@ -30,11 +30,17 @@ textarea.add-task-box {
 }
 
 form.new-task > div > button.add {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
   display: flex;
   flex-basis: 10%;
-  border-radius: 3px;
   border: solid 1px grey;
   margin-left: 1rem;
+  background-color: rgb(127, 163, 127);
+  color: white;
+  border-radius: 5px;
+  border: solid 1px  rgb(127, 163, 127);
 }
 body > div.categories {
   // border: solid 2px blue;
@@ -46,12 +52,8 @@ body > div.categories {
 section {
   opacity: 80%;
    border-radius: 2px;
-  // border: solid 2px red;
   margin-top: 0;
   margin-bottom: 2rem;
-  // padding-top: 1rem;
-  // padding-left: 1rem;
-  // padding-right: 1rem;
   padding: 1rem;
   text-align: center;
   display: flex;
@@ -59,7 +61,7 @@ section {
   justify-content: flex-start;
   align-content: center;
   flex-basis: 23%;
-  // height: 600px;
+
 }
 
 section > h2 {

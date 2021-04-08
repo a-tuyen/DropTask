@@ -75,29 +75,31 @@ div.right {
   align-items: flex-end;
   justify-content: center;
   flex-basis: 50%;
+  padding-right: .75rem;
 }
 
 div.page-links {
-  // border: solid 1px blue;
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
-  text-decoration: none;
-  color: black;
   margin-top: 0.5rem;
-  // padding-left: 1rem;
-  // padding-right: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-
 }
 
+
 a {
+  text-decoration: none;
+  color: black;
   padding-right: 1rem;
 }
 
 a:hover {
-  color: red;
+  color: rgb(127, 163, 127);
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  text-decoration: underline;
 
 }
 
@@ -107,10 +109,10 @@ div.username > span {
 }
 
 form > button {
-  background-color: rgb(152, 194, 152);
+  background-color: rgb(127, 163, 127);
   color: white;
   margin-bottom: 0.5rem;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
   border-radius: 5px;
-  border: solid 1px  rgb(152, 194, 152);
+  border: solid 1px  rgb(127, 163, 127);
 }
