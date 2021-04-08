@@ -51,6 +51,7 @@ module.exports = (db) => {
         return db.gettasksWithCategory(4, req.cookies.user_id, false);
       }).then(result => {
         templatevar["Books"] = result;
+        console.log(templatevar);
         res.render("index", templatevar);
       });
   });
@@ -143,6 +144,7 @@ module.exports = (db) => {
         return db.gettasksWithCategory(4, req.cookies.user_id, true);
       }).then(result => {
         templatevar["Books"] = result;
+        console.log(templatevar)
         res.render("completed", templatevar);
       });
   });
