@@ -36,29 +36,39 @@
     <img src=images/logo.png alt=Logo width=80 height=80>
   </a>
 
-  <h3 align=center>project_title</h3>
-
 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+- SCREENSHOT
 
 DROPTASK; is a task manager app that lets you quickly input tasks and then sorts and displays it in an appropriate list for you.
 
 Go ahead, enter in any movies you haven't gotten around to seeing yet, restaurants that are on your must-try list, hot new products that you've got your eye on or that NYT bestseller that you aspire to read one day. DROPTASK; will take care of the sorting and storing for you! 
-
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`github_username`, `repo_name`, `twitter_handle`, `email`, `project_title`, `project_description`
 
 
 ### Built With
 
 * Node
 * Express
-* Pool
-* OTHERS?
+* PostgreSQL
+* SCSS
+* Ejs
+* Google Custom Search
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+As a new user, you will have to register.
+
+Once you have logged in, you can view all of your current tasks and add additional tasks from the main page. Simply add in whatever your current task is "buy toothpaste", and it will automatically be added to the appropriate category.
+
+You can click on an individual task to see additional information that has been generated, including an image & description. From here you can also make any edits to your task description and category.
+
+Marking tasks as complete will move them to a seperate list where you can see all of your previous tasks, and deleting them will remove them completely.
+
+In the event that DROPTASK; cannot find the appropriate category, you will be taken to the task page so you can manually write a description and category.
 
 
 
@@ -67,7 +77,7 @@ Go ahead, enter in any movies you haven't gotten around to seeing yet, restauran
 
 To get a local copy up and running follow these simple steps.
 
-### Prerequisites
+### Dependencies
 
 Here is a list of the dependcies you will need to run the app.
 
@@ -90,36 +100,34 @@ Here is a list of the dependcies you will need to run the app.
 ### Installation
 
 1. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
+  git clone https://github.com/a-tuyen/to-do-list
 2. Install NPM packages
-   ```sh
-   npm install
-   ```
+  npm install
+3. Get Google Custom Search API & CX KEY
+  go here to register for keys: https://programmablesearchengine.google.com/about/
+4. Create the `.env` by using `.env.example` as a reference: `cp .env.example .env`
+5. Update the .env file with your correct local information 
+  - username: `[username]` 
+  - password: `[username]` 
+  - database: `[database]`
+  - DB_KEY: `[YOUR API KEY]`
+  - DB_CX: `[YOUR CX KEY]`
+6. Fix to binaries for sass: `npm rebuild node-sass`
+7. Reset database: `npm run db:reset`
+  - Check the db folder to see what gets created and seeded in the SDB
+8. Run the server: `npm run local`
+  - Note: nodemon is used, so you should not have to restart your server
+9. Visit `http://localhost:8080/`
 
 
 
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Once you have registered, you can view all of your current tasks and add additional ones from the main page. Simply add in whatever your current task is "buy toothpaste", and iot will automatically be added to the appropriate category.
-
-You can click on an individual task to see additional information that has been generated for each task, including an image & description. From here you can also make any edits to your task, include title and category.
-
-Marking tasks as complete will move them to a seperate list where you can see all of your previous tasks, and deleting them will remove them completely.
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a list of proposed features (and known issues).
+## Screenshots
 
 
 
 <!-- CONTRIBUTING -->
 ## Contributors
-Divya - NEED GITHUB ACCOUNT
-Amanda - NEED GITHUB ACCOUNT
-Colerk
+- [Divya](https://github.com/DivyaJagadish)
+- [Amanda](https://github.com/a-tuyen)
+- [Colerk](https://github.com/Colerk)
 

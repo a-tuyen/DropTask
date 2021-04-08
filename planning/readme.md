@@ -153,8 +153,8 @@ Wed - Making it look nice
 Thus - Finish addressing bugs and finalize / post
 <!-- - add a page for register (Cole) -->
 <!-- - get request for register page (divya) -->
-- finalizing style (tweaks) (cole/amanda)
-- create readMe for project (Cole)
+<!-- - finalizing style (tweaks) (cole/amanda)
+- create readMe for project (Cole) -->
 <!-- - update database with additional info in each column (more seeds) (Cole) -->
 <!-- - create comment on our functions / helper functions (Divya) -->
 <!-- - Check if we can change routes from "user/tasks" to just "tasks" (divya) -->

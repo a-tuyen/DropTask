@@ -36,9 +36,6 @@ INSERT INTO tasks (title, description, imageurl, completed, user_id, category_id
 VALUES ('Read catcher in the rye', 'Classic J. D. Salinger', 'https://entertainment.time.com/wp-content/uploads/sites/3/2011/08/03_top10censoredbooks_catcherintherye.jpg?w=260',
 false, 1, 4);
 INSERT INTO tasks (title, description, imageurl, completed, user_id, category_id)
-VALUES ('Watch Iron Man', 'Only the original is good', 'https://gh.cdn.sewest.net/assets/ident/news/e80b73da/Avenger_Blog_IronMan_Imagery4-ho31fqax6.jpg?quality=65',
-false, 1, 1);
-INSERT INTO tasks (title, description, imageurl, completed, user_id, category_id)
 VALUES ('Get more string', 'What is there to say about string... its string.', 'https://greenmanbushcraft.2dimg.com/29/1424253173_82.jpg',
 false, 1, 2);
 
