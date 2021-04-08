@@ -55,7 +55,7 @@
         <h2><i class="fas fa-shopping-cart"></i>Products</h2>
         <article class="category">
           <% for(let task in Products) { %>
-            <p><a href="/user/tasks/<%= Products[task].id %>"><%= Products[task].title %></a></p>
+            <p><li><a href="/user/tasks/<%= Products[task].id %>"><%= Products[task].title %></a></li></p>
           <% } %>
         </article>
       </section>
@@ -63,7 +63,7 @@
         <h2><i class="fas fa-utensils"></i> Restaurants</h2>
         <article class="category">
           <% for(let task in Restaurants) { %>
-            <p><a href="/user/tasks/<%= Restaurants[task].id %>"><%= Restaurants[task].title %></a></p>
+            <p><ul><li><a href="/user/tasks/<%= Restaurants[task].id %>"><%= Restaurants[task].title %></a></li></ul></p>
           <% } %>
         </article>
       </section>

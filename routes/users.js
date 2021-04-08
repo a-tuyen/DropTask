@@ -150,6 +150,7 @@ module.exports = (db) => {
   });
 
   // route for update profile
+
   router.get('/:userId',(req,res)=>{
     if(req.cookies.user_id === req.params.userId) {
     let userid = req.cookies.user_id;
@@ -167,4 +168,7 @@ module.exports = (db) => {
 
   return router;
 };
+
+
+
 

@@ -25,12 +25,14 @@ section {
   display: flex;
   flex-direction: column;
   border: 1px solid black;
+  border-radius: 5;
   width: 60%;
   margin: 40px;
   padding: 15px;
   // background-color: rgb(152, 194, 152);
   background-color: white;
-  opacity: 80%;
+  opacity: 90%;
+
 }
 
 section > p {
@@ -50,6 +52,9 @@ div.buttons {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
+  opacity: 1;
+  background: solid;
+
 }
 div.buttons > button.submit{
   background-color: rgb(127, 163, 127);
@@ -58,6 +63,7 @@ div.buttons > button.submit{
   margin-right: 60%;
   border-radius: 5px;
   border: solid 1px  rgb(127, 163, 127);
+  opacity: 1;
 }
 
 .col2 > form > .task_info > input {
