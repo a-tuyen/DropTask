@@ -1,14 +1,16 @@
 body > article.add-task-container {
-  border-radius: 5px;
-  border: solid 2px grey;
+  // border-radius: 5px;
+  // border: solid 2px grey;
+  // background-color: white;
   padding-bottom: 1rem;
-  margin-left: 17rem;
-  margin-right: 17rem;
+  margin-left: 30rem;
+  margin-right: 30rem;
   margin-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   flex-basis: 50%;
+  // opacity: 80%;
 }
 
 form.new-task {
@@ -21,18 +23,24 @@ textarea.add-task-box {
   background: white;
   border-radius: 5px;
   border: solid 1px grey;
-  width: 500px;
+  width: 5400px;
   justify-content: center;
   flex-basis: 90%;
   opacity: .75;
 }
 
 form.new-task > div > button.add {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
   display: flex;
   flex-basis: 10%;
-  border-radius: 3px;
   border: solid 1px grey;
   margin-left: 1rem;
+  background-color: rgb(127, 163, 127);
+  color: white;
+  border-radius: 5px;
+  border: solid 1px  rgb(127, 163, 127);
 }
 body > div.categories {
   // border: solid 2px blue;
@@ -42,14 +50,18 @@ body > div.categories {
 }
 
 section {
+  opacity: 85%;
+   border-radius: 2px;
   margin-top: 0;
-  padding-top: 0;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  // text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-content: center;
-  flex-basis: 22%;
-  height: 800px;
+  flex-basis: 23%;
+
 }
 
 section > h2 {
@@ -58,14 +70,16 @@ section > h2 {
   // border-left: none;
   // border-bottom: solid 2px grey;
   // border-radius: 5px;
-  border-radius: 3px;
-  border: solid 2px grey;
+  // border-radius: 3px;
+  color:black;
+  // border: solid 2px grey;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
   padding-top: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 article.category {
@@ -75,19 +89,50 @@ article.category {
   align-items: stretch;
 }
 
+.movies{
+  // background-color: #A64AC9;
+  // background-color: lightgray;
+  background-color: rgb(152, 194, 152);
+}
+
+.books {
+  // background-color: #FCCD04;
+  // background-color: white;
+  background-color: rgb(152, 194, 152);
+
+}
+
+.products {
+  // background-color: #FFB48F;
+  // background-color: #A64AC9;
+  // background-color: white;
+  background-color: rgb(152, 194, 152);
+}
+
+.restaurants {
+  // background-color: #0d9dfd;
+  // background-color: #FCCD04;
+  // background-color: white;
+  // background-color: rgb(155, 221, 155);
+  background-color: rgb(152, 194, 152);
+
+
+}
+
 body > div.categories > section > article.category > p {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   border-top: none;
   border-right: none;
   border-left: none;
-  border-bottom: dotted 2px grey;
+  // border-bottom: dotted 2px grey;
 
 }
 
 article > p > a {
   color: black;
-  font-family: 'Old Standard TT', serif;
+  font-family: 'Open Sans', monospace;
+  font-weight: 300;
   text-decoration: none;
 }
 

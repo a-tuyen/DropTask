@@ -1,0 +1,116 @@
+article.main-container {
+  // border: solid 2px green;
+  // border-radius: 5px;
+  // border: solid 2px grey;
+  // padding-bottom: 1rem;
+  // margin-left: 17rem;
+  // margin-right: 17rem;
+  // margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  // align-items: center;
+  // flex-basis: 50%;
+}
+
+article.main-container > div.left-container {
+  border: solid 2px grey;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 35%;
+  // width: 300px;
+  // align-items: center;
+}
+
+div.right-container {
+  border: solid 3px blue;
+  display: flex;
+  flex-direction: row;
+  flex-basis: 60%;
+}
+
+textarea.add-task-box {
+  background: white;
+  border-radius: 5px;
+  border: solid 1px grey;
+  width: 500px;
+  justify-content: center;
+  flex-basis: 90%;
+  opacity: .75;
+}
+
+form.new-task > div > button.add {
+  display: flex;
+  justify-content: center;
+  border-radius: 3px;
+  border: solid 1px grey;
+  margin-left: 1rem;
+}
+
+.movies {
+  border: solid 2px red;
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: space-evenly;
+}
+
+.books {
+  border: solid 2px red;
+}
+
+.products {
+  border: solid 2px red;
+}
+
+.restaurants {
+  border: solid 2px red;
+}
+// section {
+//   margin-top: 0;
+//   padding-top: 0;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-start;
+//   align-content: center;
+//   flex-basis: 22%;
+//   height: 800px;
+// }
+
+// section > h2 {
+//   // border-top: none;
+//   // border-right: none;
+//   // border-left: none;
+//   // border-bottom: solid 2px grey;
+//   // border-radius: 5px;
+//   border-radius: 3px;
+//   border: solid 2px grey;
+//   margin-top: 0;
+//   margin-bottom: 0;
+//   padding-top: 0.5rem;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
+
+// article.category {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-start;
+//   align-items: stretch;
+// }
+
+// body > div.categories > section > article.category > p {
+//   padding-left: 0.5rem;
+//   padding-right: 0.5rem;
+//   border-top: none;
+//   border-right: none;
+//   border-left: none;
+//   border-bottom: dotted 2px grey;
+
+// }
+
+// article > p > a {
+//   color: black;
+//   font-family: 'Old Standard TT', serif;
+//   text-decoration: none;
+// }
+

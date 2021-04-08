@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
     <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/completed.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/index.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Cinzel+Decorative:wght@400;700;900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Zilla+Slab+Highlight:wght@400;700&display=swap" rel="stylesheet">
@@ -17,12 +17,12 @@
   </head>
 
   <body>
-    <%- include('header') %>
+    <%- include("partials/_header") %>
     <article class="add-task-container">
       <h1>Completed tasks</h1>
     </article>
     <div class='categories'>
-      <section>
+      <section class="movies">
         <h2><i class="fas fa-film"></i>Movies</h2>
         <article class="category">
         <% for(let task in Movies) { %>
@@ -30,7 +30,7 @@
         <% } %>
         </article>
       </section>
-      <section>
+      <section class="books">
         <h2><i class="fas fa-book-open"></i> Books</h2>
         <article class="category">
           <% for(let task in Books) { %>
@@ -38,7 +38,7 @@
           <% } %>
         </article>
       </section>
-      <section>
+      <section class="products">
         <h2><i class="fas fa-shopping-cart"></i>Products</h2>
         <article class="category">
           <% for(let task in Products) { %>
@@ -46,7 +46,7 @@
           <% } %>
         </article>
       </section>
-      <section>
+      <section class="restaurants">
         <h2><i class="fas fa-utensils"></i> Restaurants</h2>
         <article class="category">
           <% for(let task in Restaurants) { %>

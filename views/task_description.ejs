@@ -10,7 +10,10 @@
   <link rel="stylesheet" href="/styles/task_description.css" type="text/css" />
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
-
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Old+Standard+TT:wght@400;700&family=Oswald:wght@400;700&family=Zilla+Slab+Highlight:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
 
 
 
@@ -20,34 +23,32 @@
 
 </head>
 <body>
-  <%- include('header') %>
+  <%- include("partials/_header") %>
   <section>
     <div class='col1'>
       <img src="<%= task[0].imageurl%>">
     </div>
     <div class='col2'>
       <form action="/user/<%= task[0].id%>/edit" method="POST">
-      <div class='task_info'>
-        <p><%= task[0].title%></p>
-        <input name="description" placeholder="<%= task[0].description%>">
-        <select name="type" class="input">
-          <option value="None" selected disabled hidden><%= task[0].type%></option>
-          <option value="Movie">Movie</option>
-          <option value="Product">Product</option>
-          <option value="Restaurant">Restaurant</option>
-          <option value="Book">Book</option>
-      </select>
-      </div>
-      <div class='buttons'>
-        <div class="btn-group">
-            <button type="submit" class="btn btn-primary">Submit</button>
+        <div class='task_info'>
+          <p><%= task[0].title%></p>
+          <input name="description" placeholder="<%= task[0].description%>">
+          <select name="type" class="input">
+            <option value="None" selected disabled hidden><%= task[0].type%></option>
+            <option value="Movie">Movie</option>
+            <option value="Product">Product</option>
+            <option value="Restaurant">Restaurant</option>
+            <option value="Book">Book</option>
+          </select>
+        </div>
+        <div class='buttons'>
+            <button type="submit" class="submit">Submit</button>
       </form>
           <form action="/user/<%= task[0].id%>/complete" method="POST">
-            <button type="submit" class="btn btn-success" style="margin-left: 10px">Complete</button>
+            <button type="submit">Complete</button>
           </form>
-        </div>
           <form action="/user/<%= task[0].id%>/delete" method="POST">
-            <button type="submit" class="btn btn-danger">Delete</button>
+            <button type="submit">Delete</button>
           </form>
       </div>
     </div>

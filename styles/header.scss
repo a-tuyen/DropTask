@@ -11,37 +11,30 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: lightgreen;
-  opacity: 0.9;
+  background-color: white;
+  opacity: 90%;
 }
 
-// span .task {
-//   font-family: 'Zilla Slab Highlight', cursive;
-//   font-size: xx-large;
+
+// nav > span.date {
+//   // border: solid 3px red;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   align-items: center;
 // }
 
-nav > span.date {
-  // border: solid 3px red;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+// div.datenum {
+//   display: flex;
+//   font-size: large;
+// }
+
+div.left > a {
+  color: black;
+  text-decoration: none;
 }
 
-div.datenum {
-  display: flex;
-  font-size: large;
-}
-
-div.dayofweek {
-  font-family: 'Old Standard TT', serif;
-  font-weight: 700;
-  display: flex;
-  font-size: xx-large;
-}
-
-
-nav > .left > span.drop {
+nav > .left > a > span.drop {
   font-family: 'Zilla Slab Highlight', cursive;
   font-weight: 700;
   font-size: 50px;
@@ -54,27 +47,73 @@ span.drop > span.task {
   font-size: 50px;
 }
 
-.left button {
+// .left button {
+//   display: flex;
+//   margin-left: 15px;
+//   margin-right: 10px;
+//   padding-left: 0px;
+//   padding-right: 0px;
+
+// }
+
+// .left {
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+// }
+
+div.left {
+  // border: solid 1px blue;
   display: flex;
-  margin-left: 15px;
-  margin-right: 10px;
-  padding-left: 0px;
-  padding-right: 0px;
+  flex-basis: 50%;
+}
+
+div.right {
+  // border: solid 1px blue;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  justify-content: center;
+  flex-basis: 50%;
+  padding-right: .75rem;
+}
+
+div.page-links {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+
+a {
+  text-decoration: none;
+  color: black;
+  padding-right: 1rem;
+}
+
+a:hover {
+  color: rgb(127, 163, 127);
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  text-decoration: underline;
 
 }
 
-.left {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+div.username > span {
+  font-family: 'Qwigley', cursive;
+  font-size: 350%;
 }
 
-.right {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.right > form >button {
-  margin-left: 10px;
+form > button {
+  background-color: rgb(127, 163, 127);
+  color: white;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+  border: solid 1px  rgb(127, 163, 127);
+  opacity: 1;
 }

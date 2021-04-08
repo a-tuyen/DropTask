@@ -1,0 +1,36 @@
+article.welcome {
+  background-color: white;
+  border-radius: 2px;
+  margin-left: 20rem;
+  margin-right: 20rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 85%;
+
+}
+
+article.welcome > span.drop {
+  font-family: 'Zilla Slab Highlight', cursive;
+  font-weight: 700;
+  font-size: 50px;
+  opacity: 1;
+}
+
+span.drop > span.task {
+  font-family: 'Zilla Slab Highlight', cursive;
+  font-weight: 400;
+  font-size: 50px;
+}
+
+article.welcome > p {
+  // border: solid 2px green;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+
+}

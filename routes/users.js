@@ -144,12 +144,13 @@ module.exports = (db) => {
         return db.gettasksWithCategory(4, req.cookies.user_id, true);
       }).then(result => {
         templatevar["Books"] = result;
-        console.log(templatevar)
+        console.log('templateComplete', templatevar)
         res.render("completed", templatevar);
       });
   });
 
   // route for update profile
+
   router.get('/:userId',(req,res)=>{
     if(req.cookies.user_id === req.params.userId) {
     let userid = req.cookies.user_id;
@@ -167,4 +168,7 @@ module.exports = (db) => {
 
   return router;
 };
+
+
+
 
