@@ -1,3 +1,5 @@
+-- Drop and recreate Categories and Tasks table;
+
 DROP TABLE IF EXISTS users CASCADE;
 
 CREATE TABLE users (

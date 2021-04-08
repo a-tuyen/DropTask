@@ -1,0 +1,54 @@
+article.welcome {
+  background-color: white;
+  border-radius: 2px;
+  margin-left: 20rem;
+  margin-right: 20rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 85%;
+
+}
+
+article.welcome > span.drop {
+  font-family: 'Zilla Slab Highlight', cursive;
+  font-weight: 700;
+  font-size: 50px;
+  opacity: 1;
+}
+
+span.drop > span.task {
+  font-family: 'Zilla Slab Highlight', cursive;
+  font-weight: 400;
+  font-size: 50px;
+}
+
+article.welcome > p {
+  // border: solid 2px green;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.task_info > input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 10px;
+}
+
+article > form >button {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  display: flex;
+  flex-basis: 10%;
+  border: solid 1px grey;
+  background-color: rgb(127, 163, 127);
+  color: white;
+  border-radius: 5px;
+  border: solid 1px  rgb(127, 163, 127);
+}

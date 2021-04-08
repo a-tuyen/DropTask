@@ -1,4 +1,4 @@
--- Drop and recreate Categories and Tasks table (Example);
+-- Drop and recreate Categories and Tasks table;
 
 DROP TABLE IF EXISTS tasks CASCADE;
 CREATE TABLE tasks (
