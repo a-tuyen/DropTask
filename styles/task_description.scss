@@ -42,6 +42,7 @@ section {
   margin-bottom: 15px;
   width: 100%;
   padding: 8px;
+  height: 150px;
 }
 //description input for profile page
 .col2 > form > .task_info > input {
@@ -71,7 +72,7 @@ section {
 select {
   display: flex;
   flex-direction: row;
-  margin-left: 0.5rem;
+  // margin-left: 0.5rem;
   // margin-top: 0.3rem;
   // margin-bottom: 3rem;
   flex-basis: 50%;

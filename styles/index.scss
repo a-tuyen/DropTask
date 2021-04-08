@@ -1,6 +1,6 @@
 //container with add a task title, textarea and add button
 body > article.add-task-container {
-  background-color: rgb(152, 194, 152);
+  background-color: transparent;
   padding-bottom: 1rem;
   margin-bottom: 1.5rem;
   display: flex;
@@ -61,7 +61,7 @@ body > div.categories {
 //all 4 categories grouped all together
 section {
   opacity: 85%;
-  border-radius: 2px;
+  border-radius: 5px;
   margin-top: 0;
   margin-bottom: 2rem;
   padding: 1rem;
@@ -132,6 +132,6 @@ div.categories > section > article.category > p {
 }
 
 ul > li > a:hover {
-  color: yellow;
+  color: rgb(53, 53, 168);
 }
 
