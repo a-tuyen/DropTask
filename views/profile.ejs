@@ -28,22 +28,16 @@
     <div class='col2'>
       <form>
       <div class='task_info'>
-        <p>Name</p>
-        <input name="description" placeholder="Email Address">
-        <input name="description" placeholder="Password">
-        <input name="description" placeholder="Confirm Password">
+        <p><%= user[0].name %></p>
+        <input name="description" placeholder="<%= user[0].email %>">
+        <input name="description" type="password" placeholder="Password">
+        <input name="description" type="password" placeholder="Confirm Password">
       </div>
       <div class='buttons'>
         <div class="btn-group">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Update</button>
       </form>
-          <form>
-            <button type="submit" class="btn btn-success" style="margin-left: 10px">Complete</button>
-          </form>
         </div>
-          <form>
-            <button type="submit" class="btn btn-danger">Delete</button>
-          </form>
       </div>
     </div>
   </section>
