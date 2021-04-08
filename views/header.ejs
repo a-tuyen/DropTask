@@ -3,8 +3,6 @@
 
 
 <nav>
-  <span class="date">
-    <div class="container">
       <!-- <div class="datenum"><script>document.write(new Date().toLocaleDateString());</script></div>
       <div class="dayofweek"><script type="text/javascript" class="dateinnumbers">
         var d=new Date()
@@ -12,19 +10,16 @@
                     "Friday","Saturday")
         document.write(weekday[d.getDay()])
       </script> -->
-    </div>
-  </div>
-  <div class="log">
+  <div class="left">
+    <span class="drop">DROP<span class="task"> TASK;</span></span>
     <form action="/user/completed" method="GET">
-      <button>Completed Tasks</button>  </div>
+      <button>Completed Tasks</button>
     </form>
-  </span>
-  <div>
-    <span class= "drop">DROP<span class= "task"> TASK;</span></span>
   </div>
-    <div> Hello User
-      <form method="POST" action="/logout">
-        <button type="submit">Logout</button>
-      </form>
+  <div class="right">
+    <p>Hello User</p>
+    <form method="POST" action="/logout">
+      <button type="submit">Logout</button>
+    </form>
   </div>
 </nav>
