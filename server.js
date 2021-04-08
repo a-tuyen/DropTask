@@ -29,7 +29,6 @@ app.use("/styles", sass({
 app.use(express.static("public"));
 
 // Separated Routes for each Resource
-// Note: Feel free to replace the example routes below with your own
 const usersRoutes = require("./routes/users");
 
 // Mount all resource routes
@@ -55,7 +54,7 @@ app.post('/logout',(req,res)=>{
 
 //Route for register
 app.get("/register",(req,res)=>{
-  res.render("index");
+  res.render("register");
 })
 
 //Listening for PORT

@@ -1,7 +1,7 @@
 /*
  * All routes for Users are defined here
- * See: https://expressjs.com/en/guide/using-middleware.html#middleware.router
  */
+
 const express = require('express');
 const axios = require('axios');
 const router = express.Router();
@@ -10,7 +10,7 @@ const cx = process.env.DB_CX;
 const findCategory = require('./helper_function');
 module.exports = (db) => {
 
-  // TaskPage of  a user with a particular user:ID
+  // TaskPage of a user with a particular user:ID
   router.get('/tasks', (req, res) => {
     let templatevar = {}
     db.gettasksWithCategory(1, req.cookies.user_id, false).
@@ -25,7 +25,6 @@ module.exports = (db) => {
       return db.gettasksWithCategory(4, req.cookies.user_id, false);
     }).then(result => {
       templatevar["Books"] = result;
-      console.log(templatevar);
       res.render("index", templatevar);
     }).catch(err => console.log(err));
   });
@@ -87,7 +86,7 @@ module.exports = (db) => {
   // Route for Editing a particular task
   router.post('/:taskId/edit', (req, res) => {
     let newCategory_id;
-    // Finds updated Category
+    // Finds new category and updates task accordingly
     if (req.body.type) {
       if (req.body.type === "Product") {
         newCategory_id = 2;
@@ -99,7 +98,7 @@ module.exports = (db) => {
         newCategory_id = 1;
       }
     }
-    //check howmany parameters are changed AND CORRECTE ACCORDINGLY
+    //checks how many parameters are changed and corrects accordingly
     if (req.body.description && req.body.type) {
       db.updatedescription(req.body.description, req.params.taskId)
       .then(() => {
@@ -123,25 +122,24 @@ module.exports = (db) => {
 
   });
 
-  // Route for displaying completed List
+  // Route for displaying completed list
   router.get('/completed', (req, res) => {
     let templatevar = {}
-    db.gettasksWithCategory(1, req.cookies.user_id, true).
-      then(result => {
-        templatevar["Movies"] = result;
-        return db.gettasksWithCategory(2, req.cookies.user_id, true);
-      }
-      ).then(result => {
-        templatevar["Products"] = result;
-        return db.gettasksWithCategory(3, req.cookies.user_id, true);
-      }).then(result => {
-        templatevar["Restaurants"] = result;
-        return db.gettasksWithCategory(4, req.cookies.user_id, true);
-      }).then(result => {
-        templatevar["Books"] = result;
-        console.log('templateComplete', templatevar)
-        res.render("completed", templatevar);
-      });
+    db.gettasksWithCategory(1, req.cookies.user_id, true)
+    .then(result => {
+      templatevar["Movies"] = result;
+      return db.gettasksWithCategory(2, req.cookies.user_id, true);
+    }
+    ).then(result => {
+      templatevar["Products"] = result;
+      return db.gettasksWithCategory(3, req.cookies.user_id, true);
+    }).then(result => {
+      templatevar["Restaurants"] = result;
+      return db.gettasksWithCategory(4, req.cookies.user_id, true);
+    }).then(result => {
+      templatevar["Books"] = result;
+      res.render("completed", templatevar);
+    });
   });
 
   // Route for update profile
@@ -152,7 +150,6 @@ module.exports = (db) => {
       db.getuserbyId(userid)
         .then((result) => {
           templatevar["user"] = result;
-          console.log(templatevar);
           res.render("profile", templatevar)
         }).catch(err => console.log(err));
     } else {

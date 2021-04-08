@@ -1,4 +1,4 @@
-// Function to find the Categorize the object and Send data.
+// Function to find the category and return and object with the appropriate data.
 const  findCategory  = function(data){
   let dataobj={};
   if (data=== undefined) {
