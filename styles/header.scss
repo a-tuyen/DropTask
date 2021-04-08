@@ -1,7 +1,4 @@
 nav {
-  // border: solid 3px red;
-  // font-family: 'Zilla Slab Highlight', cursive;
-  // font-weight: 700;
   width: 100%;
   position: fixed;
   top: 0;
@@ -14,20 +11,6 @@ nav {
   background-color: white;
   opacity: 90%;
 }
-
-
-// nav > span.date {
-//   // border: solid 3px red;
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: center;
-//   align-items: center;
-// }
-
-// div.datenum {
-//   display: flex;
-//   font-size: large;
-// }
 
 div.left > a {
   color: black;
@@ -47,29 +30,12 @@ span.drop > span.task {
   font-size: 50px;
 }
 
-// .left button {
-//   display: flex;
-//   margin-left: 15px;
-//   margin-right: 10px;
-//   padding-left: 0px;
-//   padding-right: 0px;
-
-// }
-
-// .left {
-//   display: flex;
-//   flex-direction: row;
-//   align-items: center;
-// }
-
 div.left {
-  // border: solid 1px blue;
   display: flex;
   flex-basis: 50%;
 }
 
 div.right {
-  // border: solid 1px blue;
   display: flex;
   flex-direction: column-reverse;
   align-items: flex-end;

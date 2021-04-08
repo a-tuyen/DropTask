@@ -25,7 +25,7 @@
         <h2><i class="fas fa-film"></i>Movies</h2>
         <article class="category">
         <% for(let task in Movies) { %>
-          <ul><li><a href="/user/tasks/<%= Movies[task].id %>"><%= Movies[task].title %></a></ul></li>
+          <ul><li><%= Movies[task].title %></ul></li>
         <% } %>
         </article>
       </section>
@@ -33,7 +33,7 @@
         <h2><i class="fas fa-book-open"></i> Books</h2>
         <article class="category">
           <% for(let task in Books) { %>
-          <ul><li><a href="/user/tasks/<%= Books[task].id %>"><%= Books[task].title %></a></ul></li>
+          <ul><li><%= Books[task].title %></ul></li>
           <% } %>
         </article>
       </section>
@@ -41,7 +41,7 @@
         <h2><i class="fas fa-shopping-cart"></i>Products</h2>
         <article class="category">
           <% for(let task in Products) { %>
-            <ul><li><a href="/user/tasks/<%= Products[task].id %>"><%= Products[task].title %></a></ul></li>
+            <ul><li><%= Products[task].title %></ul></li>
           <% } %>
         </article>
       </section>
@@ -49,7 +49,7 @@
         <h2><i class="fas fa-utensils"></i> Restaurants</h2>
         <article class="category">
           <% for(let task in Restaurants) { %>
-            <ul><li><a href="/user/tasks/<%= Restaurants[task].id %>"><%= Restaurants[task].title %></a></ul></li>
+            <ul><li><%= Restaurants[task].title %></ul></li>
           <% } %>
         </article>
       </section>

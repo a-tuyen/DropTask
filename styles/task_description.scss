@@ -29,7 +29,6 @@ section {
   padding-right: 15px;
   padding-top: 15px;
   padding-left: 15px;
-  // background-color: rgb(152, 194, 152);
   background-color: white;
   opacity: 90%;
 }
@@ -44,6 +43,7 @@ section {
   padding: 8px;
   height: 150px;
 }
+
 //description input for profile page
 .col2 > form > .task_info > input {
   display: flex;
@@ -59,22 +59,10 @@ section {
   opacity: 1;
 }
 
-// .label-input-container {
-//   display: flex;
-//   justify-content: flex-start;
-//   align-items: center;
-//   padding-right: 10rem;
-//   // flex-basis: 40%;
-
-// }
-
 //dropdown menu
 select {
   display: flex;
   flex-direction: row;
-  // margin-left: 0.5rem;
-  // margin-top: 0.3rem;
-  // margin-bottom: 3rem;
   flex-basis: 50%;
 }
 
@@ -85,11 +73,9 @@ div.container-buttons {
   margin-bottom: 0rem;
   display: flex;
   justify-content: space-between;
-  // margin-bottom: 0.5rem;
-  // margin-right: 60%;
   opacity: 1;
 }
-//contains on;y del and comp buttons
+//contains only del and complete buttons
 .container-buttons > .comp-del-buttons {
   display: flex;
   opacity: 1;
