@@ -32,7 +32,7 @@
       <form action="/user/<%= task[0].id%>/edit" method="POST">
         <div class='task_info'>
           <h3 class="task-title"><%= task[0].title%></h3>
-          <textarea name="description">{<%= task[0].description%>}</textarea>
+          <textarea name="description"><%= task[0].description%></textarea>
           <div class="label-input-container">
             <select name="type" class="input">
             <option value="None" selected disabled hidden><%= task[0].type%></option>
@@ -44,6 +44,7 @@
           <div class='container-buttons'>
             <button type="submit" class="submit">Submit</button>
             <div class="comp-del-buttons">
+            </form>
               <form action="/user/<%= task[0].id%>/complete" method="POST">
                 <button type="submit">Complete</button>
               </form>
@@ -53,7 +54,7 @@
             </div>
           </div>
         </div>
-      </form>
+
     </div>
     </div>
   </section>
