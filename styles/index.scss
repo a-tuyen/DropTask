@@ -1,26 +1,35 @@
+//container with add a task title, textarea and add button
 body > article.add-task-container {
-  // border-radius: 5px;
-  // border: solid 2px grey;
-  // background-color: white;
+  background-color: rgb(152, 194, 152);
   padding-bottom: 1rem;
-  margin-left: 30rem;
-  margin-right: 30rem;
   margin-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-basis: 50%;
-  // opacity: 80%;
+  justify-content: center;
+  opacity: 85%;
+  margin-right: 35%;
+  margin-left: 35%;
+
 }
 
+//add task title
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+}
+
+//this container contains textarea and add button
 form.new-task {
+  background: transparent;
   display: flex;
   width: 300px;
   align-items: center;
-}
 
+}
+//textarea for add a task
 textarea.add-task-box {
-  background: white;
+  background: whitesmoke;
   border-radius: 5px;
   border: solid 1px grey;
   width: 5400px;
@@ -28,7 +37,7 @@ textarea.add-task-box {
   flex-basis: 90%;
   opacity: .75;
 }
-
+//add task button
 form.new-task > div > button.add {
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
@@ -42,20 +51,20 @@ form.new-task > div > button.add {
   border-radius: 5px;
   border: solid 1px  rgb(127, 163, 127);
 }
+//container for categories
 body > div.categories {
-  // border: solid 2px blue;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
 
+//all 4 categories grouped all together
 section {
   opacity: 85%;
-   border-radius: 2px;
+  border-radius: 2px;
   margin-top: 0;
   margin-bottom: 2rem;
   padding: 1rem;
-  // text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -64,18 +73,17 @@ section {
 
 }
 
+//each indiv category title
 section > h2 {
-  // border-top: none;
-  // border-right: none;
-  // border-left: none;
-  // border-bottom: solid 2px grey;
-  // border-radius: 5px;
-  // border-radius: 3px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: solid 1px black;
   color:black;
-  // border: solid 2px grey;
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   padding-top: 0.5rem;
+  padding-bottom: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,50 +97,41 @@ article.category {
   align-items: stretch;
 }
 
+//each indiv category includes text and title
 .movies{
-  // background-color: #A64AC9;
-  // background-color: lightgray;
   background-color: rgb(152, 194, 152);
 }
 
 .books {
-  // background-color: #FCCD04;
-  // background-color: white;
   background-color: rgb(152, 194, 152);
 
 }
 
 .products {
-  // background-color: #FFB48F;
-  // background-color: #A64AC9;
-  // background-color: white;
   background-color: rgb(152, 194, 152);
 }
 
 .restaurants {
-  // background-color: #0d9dfd;
-  // background-color: #FCCD04;
-  // background-color: white;
-  // background-color: rgb(155, 221, 155);
   background-color: rgb(152, 194, 152);
-
-
 }
 
-body > div.categories > section > article.category > p {
+//each bullet point
+div.categories > section > article.category > p {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  // border-bottom: dotted 2px grey;
-
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  padding-top: 0;
 }
 
-article > p > a {
-  color: black;
-  font-family: 'Open Sans', monospace;
-  font-weight: 300;
+//hyperlink properties
+ ul > li > a {
   text-decoration: none;
+  color: black;
+}
+
+ul > li > a:hover {
+  color: yellow;
 }
 

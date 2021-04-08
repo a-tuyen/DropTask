@@ -1,4 +1,4 @@
-
+//contains both pic and box with all the forms & buttons
 section {
   display: flex;
   flex-direction: row;
@@ -7,93 +7,50 @@ section {
   margin-left: 8rem;
 }
 
-
+//image container
 .col1 {
   display: flex;
   flex-direction: column;
-  // border: 1px solid black;
   width: 35%;
   margin: 40px;
   justify-content: center;
   align-items: center;
   background:transparent;
-
 }
 
-
+//contains all text field and buttons
 .col2 {
+  border: 1px solid black;
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
-  border-radius: 5;
+  border-radius: 5px;
   width: 60%;
   margin: 40px;
-  padding: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-left: 15px;
   // background-color: rgb(152, 194, 152);
   background-color: white;
   opacity: 90%;
-
 }
 
-section > p {
-  display: flex;
-  border: 1px solid black;
-  height: 50px;
-  align-items: center;
-  padding: 15px;
-  text-decoration: line-through
-
-}
-
-div.buttons {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  opacity: 1;
-  background: solid;
-
-}
-div.buttons > button.submit{
-  background-color: rgb(127, 163, 127);
-  color: white;
-  margin-bottom: 0.5rem;
-  margin-right: 60%;
-  border-radius: 5px;
-  border: solid 1px  rgb(127, 163, 127);
-  opacity: 1;
-}
-
-.col2 > form > .task_info > input {
-
+//description textarea for task-description page
+.col2 > form > .task_info > textarea {
   display: flex;
   resize: none;
+  margin-top: .3rem;
   margin-bottom: 15px;
   width: 100%;
   padding: 8px;
-
 }
-
-// article {
-//   display: flex;
-//   margin: 40px;
-//   padding-left: 15px;
-//   background-color: green;
-//   height: 80px;
-//   align-items: center;
-//   border-radius: 10px;
-//   border-left-style: solid;
-//   border-left-color: red;
-//   border-left-width: 6px;
-// }
-
-select {
+//description input for profile page
+.col2 > form > .task_info > input {
   display: flex;
-  flex-direction: row;
-  margin-top: 15px;
+  resize: none;
+  margin-top: .3rem;
   margin-bottom: 15px;
+  width: 100%;
+  padding: 8px;
 }
 
 ::placeholder {
@@ -101,12 +58,50 @@ select {
   opacity: 1;
 }
 
-.task_info > input {
+// .label-input-container {
+//   display: flex;
+//   justify-content: flex-start;
+//   align-items: center;
+//   padding-right: 10rem;
+//   // flex-basis: 40%;
+
+// }
+
+//dropdown menu
+select {
   display: flex;
-  width: 100%;
+  flex-direction: row;
+  margin-left: 0.5rem;
+  // margin-top: 0.3rem;
+  // margin-bottom: 3rem;
+  flex-basis: 50%;
 }
 
-.task_info > select {
+//contains all 3 buttons
+div.container-buttons {
+  color: white;
+  padding-top: 1rem;
+  margin-bottom: 0rem;
   display: flex;
-  width: 25%;
+  justify-content: space-between;
+  // margin-bottom: 0.5rem;
+  // margin-right: 60%;
+  opacity: 1;
+}
+//contains on;y del and comp buttons
+.container-buttons > .comp-del-buttons {
+  display: flex;
+  opacity: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  background-color: rgb(127, 163, 127);
+  color: white;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+  border: solid 1px  rgb(127, 163, 127);
+  opacity: 1;
 }
