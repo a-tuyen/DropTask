@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
     <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/index.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="/styles/index.css" type="text/css" /> -->
+    <link rel="stylesheet" href="/styles/welcome.css" type="text/css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Cinzel+Decorative:wght@400;700;900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Zilla+Slab+Highlight:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-a11y="true"></script>
@@ -17,10 +17,14 @@
   </head>
 
   <body>
-    <%- include('header') %>
+
     <article class="welcome">
-      <h1>Welcome!</h1>
-      <h1>Please Login or Register</h1>
+      <h1>Welcome to</h1>
+      <span class= "drop">DROP<span class= "task"> TASK;</span></span>
+      <p>DROPTASK; is a task manager app that lets you quickly input tasks and it will be sorted and displayed into an appropriate list for you.
+        Go ahead, enter in any movies you haven't gotten around to seeing yet, restaurants that are on your must-try list, hot new products that you've got your eye on or that NYT bestselling book that you aspire to read one day, DROPTASK; will take care of the sorting and storing for you!
+      </p>
+      <h4>To begin, please Login or Register</h4>
         <div>
           <form method="GET" action="/login">
             <button type="submit" class="add">Login</button>
@@ -28,7 +32,9 @@
           <form method="GET" action="/register">
             <button type="submit" class="add">Register</button>
           </form>
+        </div>
           <!-- MUST REMOVE! -->
+          <div>
           <a href="/login/1">LOGIN</a>
           <a href="/user/tasks/">   GO TO TASKS</a>
         </div>
