@@ -5,10 +5,9 @@ const  findCategory  = function(data){
     dataobj["category_id"] = 5;//uncategorised
     dataobj["description"] = "No description found";
     dataobj["created_at"] = Date.now();
-    dataobj["imageurl"] = "https://rokusek.com/wp-content/uploads/2019/12/female-shrug-emoji-1-768x768.jpg";
+    dataobj["imageurl"] = "https://www.wpbeginner.com/wp-content/uploads/2013/04/wp404error.jpg";
     dataobj["completed"] = false;
   } else {
-    console.log(data)
   if (data[0].displayLink === "www.imdb.com") {
     category = 1;// Movie
   } else if(data[0].displayLink === "www.amazon.ca") {
@@ -18,7 +17,6 @@ const  findCategory  = function(data){
   } else {
     category = 4 //to read;
   }
-
   dataobj["category_id"] = category;
   dataobj["description"] = data[0].snippet;
   dataobj["created_at"] = Date.now();

@@ -159,10 +159,10 @@ Thus - Finish addressing bugs and finalize / post
 <!-- - create comment on our functions / helper functions (Divya) -->
 <!-- - Check if we can change routes from "user/tasks" to just "tasks" (divya) -->
 <!-- - address modularizing app and project/file cleanup (Divya - review as team) -->
-- ESLint project (team)
+<!-- - ESLint project (team) -->
 - reherse presentation (team)
-- create logo (if we want) 
-- stretch work
+<!-- - create logo (if we want)  -->
+<!-- - stretch work -->
 
 Presentation: 
 COLE will share screen and navigate app.

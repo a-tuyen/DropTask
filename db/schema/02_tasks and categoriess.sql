@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS tasks CASCADE;
 CREATE TABLE tasks (
   id SERIAL PRIMARY KEY NOT NULL,
   title VARCHAR (255),
-  description VARCHAR (255),
+  description VARCHAR (1024),
   imageurl  VARCHAR(1024),
   created_at DATE,
   completed BOOLEAN NOT NULL,

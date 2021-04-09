@@ -9,9 +9,9 @@ const bodyParser = require("body-parser");
 const sass       = require("node-sass-middleware");
 const app        = express();
 const morgan     = require('morgan');
-var cookieParser = require('cookie-parser');
+let cookieParser = require('cookie-parser');
 app.use(cookieParser());
-const db = require("./lib/database_query.js")
+const db = require("./lib/database_query.js");
 
 // Load the logger first so all (static) HTTP requests are logged to STDOUT
 // 'dev' = Concise output colored by response status for development use.
@@ -50,12 +50,12 @@ app.get('/login/:userId', (req, res) => {
 app.post('/logout',(req,res)=>{
   res.clearCookie("user_id");
   res.redirect("/");
-})
+});
 
 //Route for register
 app.get("/register",(req,res)=>{
   res.render("register");
-})
+});
 
 //Listening for PORT
 app.listen(PORT, () => {
