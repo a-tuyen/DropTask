@@ -41,7 +41,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-- SCREENSHOT
+!["Tasks Page"](https://raw.githubusercontent.com/a-tuyen/to-do-list/master/documents/mainpage.png)
 
 DROPTASK; is a task manager app that lets you quickly input tasks and then sorts and displays it in an appropriate list for you.
 
@@ -123,6 +123,8 @@ Here is a list of the dependcies you will need to run the app.
 
 ## Screenshots
 
+!["Welcome"](https://raw.githubusercontent.com/a-tuyen/to-do-list/master/documents/welcome.png)
+!["Task ID page"](https://raw.githubusercontent.com/a-tuyen/to-do-list/master/documents/idpage.png)
 
 
 <!-- CONTRIBUTING -->
