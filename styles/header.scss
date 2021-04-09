@@ -1,3 +1,4 @@
+// nav alignment and styling
 nav {
   width: 100%;
   position: fixed;
@@ -17,6 +18,7 @@ div.left > a {
   text-decoration: none;
 }
 
+// logo styling
 nav > .left > a > span.drop {
   font-family: 'Zilla Slab Highlight', cursive;
   font-weight: 700;
@@ -24,17 +26,21 @@ nav > .left > a > span.drop {
   opacity: 1;
 }
 
+// logo styling
+
 span.drop > span.task {
   font-family: 'Zilla Slab Highlight', cursive;
   font-weight: 400;
   font-size: 50px;
 }
 
+// creates 1 of 2 inline columns
 div.left {
   display: flex;
   flex-basis: 50%;
 }
 
+// creates 1 of 2 inline columns
 div.right {
   display: flex;
   flex-direction: column-reverse;
@@ -44,6 +50,7 @@ div.right {
   padding-right: .75rem;
 }
 
+// font styling for page links
 div.page-links {
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
@@ -53,13 +60,13 @@ div.page-links {
   align-items: baseline;
 }
 
-
 .page-links > a {
   text-decoration: none;
   color: black;
   padding-right: 1rem;
 }
 
+// link on hover effect
 .page-links > a:hover {
   color: rgb(127, 163, 127);
   border-top: none;
@@ -69,11 +76,13 @@ div.page-links {
 
 }
 
+// username styling
 div.username > span {
   font-family: 'Qwigley', cursive;
   font-size: 350%;
 }
 
+// button styling
 form > button {
   background-color: rgb(127, 163, 127);
   color: white;

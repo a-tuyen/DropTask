@@ -1,3 +1,5 @@
+
+// outter box element
 article.welcome {
   background-color: white;
   border-radius: 2px;
@@ -12,6 +14,7 @@ article.welcome {
 
 }
 
+// logo styling
 article.welcome > span.drop {
   font-family: 'Zilla Slab Highlight', cursive;
   font-weight: 700;
@@ -19,14 +22,15 @@ article.welcome > span.drop {
   opacity: 1;
 }
 
+// logo styling
 span.drop > span.task {
   font-family: 'Zilla Slab Highlight', cursive;
   font-weight: 400;
   font-size: 50px;
 }
 
+// below is all inner box/element styling
 article.welcome > p {
-  // border: solid 2px green;
   display: flex;
   text-align: center;
   justify-content: center;
@@ -40,7 +44,7 @@ article.welcome > p {
   margin: 10px;
 }
 
-article > form >button {
+article > form > button {
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   font-size: 18px;
