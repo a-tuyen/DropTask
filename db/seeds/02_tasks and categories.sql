@@ -9,13 +9,13 @@ INSERT INTO tasks (title, description, imageurl, completed, user_id, category_id
 VALUES ('Read redwall', 'hamsters with swords?', 'https://upload.wikimedia.org/wikipedia/en/4/49/RedwallUSCover.jpg',
 false, 1, 4);
 INSERT INTO tasks (title, description, imageurl, completed, user_id, category_id)
-VALUES ('Make reservation at the flying pig', 'so goood', 'https://pbs.twimg.com/profile_images/744965911816265729/y2jA2Cgi_400x400.jpg',
+VALUES ('Make reservation at the flying pig', 'so good', 'https://pbs.twimg.com/profile_images/744965911816265729/y2jA2Cgi_400x400.jpg',
 false, 1, 3);
 INSERT INTO tasks (title, description, imageurl, completed, user_id, category_id)
 VALUES ('Watch robo-cop', 'bizzare movie', 'https://upload.wikimedia.org/wikipedia/en/1/1a/RoboCop_%28Peter_Weller%29.png',
 false, 1, 1);
 INSERT INTO tasks (title, description, imageurl, completed, user_id, category_id)
-VALUES ('Eat at la taqueria', 'my favorite tacos', 'https://media-cdn.tripadvisor.com/media/photo-s/17/60/51/2a/photo1jpg.jpg',
+VALUES ('Eat at la taqueria', 'my favourite tacos', 'https://media-cdn.tripadvisor.com/media/photo-s/17/60/51/2a/photo1jpg.jpg',
 false, 1, 3);
 INSERT INTO tasks (title, description, imageurl, completed, user_id, category_id)
 VALUES ('Rent Avengers', 'great action movie', 'https://www.stylist.co.uk/images/app/uploads/2018/09/14124114/09a_aeg_dompayoff_1sht-crop-1600329397-1161x1161.jpg?w=256&h=256&fit=max&auto=format%2Ccompress',
@@ -24,7 +24,7 @@ INSERT INTO tasks (title, description, imageurl, completed, user_id, category_id
 VALUES ('pick up McDonalds', 'Couple big Macs', 'https://pbs.twimg.com/profile_images/1334527633992761344/kwlzzLs6_400x400.png',
 false, 1, 3);
 INSERT INTO tasks (title, description, imageurl, completed, user_id, category_id)
-VALUES ('Checkout pirates of the carribean', 'pirates are still cool right?', 'https://c-sf.smule.com/rs-s49/arr/45/ca/17a30efa-51fc-4386-9140-4642523d76d1.jpg',
+VALUES ('Checkout pirates of the caribbean', 'pirates are still cool right?', 'https://c-sf.smule.com/rs-s49/arr/45/ca/17a30efa-51fc-4386-9140-4642523d76d1.jpg',
 false, 1, 1);
 INSERT INTO tasks (title, description, imageurl, completed, user_id, category_id)
 VALUES ('Get duct tape', 'handymans tool', 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Duct-tape.jpg/220px-Duct-tape.jpg',
