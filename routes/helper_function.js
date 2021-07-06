@@ -10,9 +10,9 @@ const  findCategory  = function(data){
   } else {
   if (data[0].displayLink === "www.imdb.com") {
     category = 1;// Movie
-  } else if(data[0].displayLink === "www.amazon.ca") {
+  } else if (data[0].displayLink === "www.amazon.ca") {
     category = 2;//products
-  }else if(data[0].displayLink === "www.yelp.ca") {
+  } else if (data[0].displayLink === "www.yelp.ca") {
     category = 3 ;//food
   } else {
     category = 4 //to read;
