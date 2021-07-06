@@ -16,12 +16,14 @@ Go ahead, enter in any movies you haven't gotten around to seeing yet, restauran
 
 ### Built With
 
-* Node
+* Node.js
 * Express
 * PostgreSQL
 * SCSS
-* Ejs
+* HTML
+* EJS
 * Google Custom Search
+
 
 <!-- USAGE EXAMPLES -->
 ## Usage
