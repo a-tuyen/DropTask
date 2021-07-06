@@ -1,7 +1,7 @@
 // Function to find the category and return and object with the appropriate data.
 const  findCategory  = function(data){
-  let dataobj={};
-  if (data=== undefined) {
+  let dataobj = {};
+  if (data === undefined) {
     dataobj["category_id"] = 5;//uncategorised
     dataobj["description"] = "No description found";
     dataobj["created_at"] = Date.now();
